@@ -97,8 +97,8 @@ function setStartPosition()
   console.log("Set Start Position");
   //run through each week, subject, task and create new position object with start status set to not done. 
   TAGS.week.forEach(week => {
-    TAGS.subject.forEach(subject => {
-      TAGS.task.forEach(task => {
+    TAGS.subjects.forEach(subject => {
+      TAGS.tasks.forEach(task => {
         //create new position object and add to start
         const positionItem = {week:week, subject:subject, task:task, status:"Not Done"};
         state.position.push(positionItem);
