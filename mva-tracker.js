@@ -6,6 +6,7 @@ const TAGS = {
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
+let activeWeeks = [];
 let activeSubjects = [];
 
 console.log("TAGS "+TAGS);
@@ -21,13 +22,14 @@ tagOptions.appendChild(weekHeader);
 //Load Week Buttons
 TAGS.week.forEach(item => {
   const tagButton = document.createElement("button");
-  tagButton.className = "tag-btn";
+  tagButton.className = "week-btn";
   tagButton.setAttribute("data-tag", item);
   tagButton.innerHTML = item;
   //Set listener so action can be taken
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
       console.log("Clicked "+tagButton.dataset.tag);
+      activeWeeks = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
       updateTracker();
     });
   tagOptions.appendChild(tagButton);
@@ -79,6 +81,40 @@ TAGS.tasks.forEach(item => {
 function updateTracker()
 {
   console.log("Update Tracker");
+
+  //Update Weeks - Week A and then Week B - If else if not picked - if empty list show both
+  if (activeWeeks.length > 0)
+  {
+     //If Week A selected
+     if (activeWeeks.includes("A"))
+     {
+       console.log("Week A included");
+       document.getElementById("weekA").hidden = false;
+     }
+     else 
+     {
+       document.getElementById("weekA").hidden = true;
+     }
+
+     //If Week B selected
+     if (activeWeeks.includes("B"))
+     {
+       console.log("Week B included");
+       document.getElementById("weekA").hidden = false;
+     }
+     else 
+     {
+       document.getElementById("weekB").hidden = true;
+     }
+       
+  }
+  else
+  {
+    document.getElementById("weekA").hidden = false;
+    document.getElementById("weekB").hidden = false;
+  }
+    
+  
   //Temporary Check to see what subjects have been picked
   activeSubjects.forEach(item => {
        console.log("Selected Subjects "+item);
