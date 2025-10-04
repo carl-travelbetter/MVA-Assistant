@@ -14,7 +14,7 @@ const tagOptions = document.getElementById("tag-filters");
 //Set Week Tag Header
 const weekHeader = document.createElement("h3");
 weekHeader.textContent = "Select Week";
-tagOptions.appendChild("weekHeader");
+tagOptions.appendChild(weekHeader);
 
 //Load Week Buttons
 TAGS.week.forEach(item => {
@@ -35,7 +35,7 @@ TAGS.week.forEach(item => {
 //Set Subject Tag Header
 const subjectHeader = document.createElement("h3");
 subjectHeader.textContent = "Select Subjects";
-tagOptions.appendChild("subjectHeader");
+tagOptions.appendChild(subjectHeader);
 
 //Load Subject Buttons
 TAGS.subjects.forEach(item => {
@@ -56,7 +56,7 @@ TAGS.subjects.forEach(item => {
 //Set Task Tag Header
 const taskHeader = document.createElement("h3");
 taskHeader.textContent = "Select Tasks";
-tagOptions.appendChild("taskHeader");
+tagOptions.appendChild(taskHeader);
 
 //Load Task Buttons
 TAGS.tasks.forEach(item => {
