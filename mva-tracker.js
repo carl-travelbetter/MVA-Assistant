@@ -9,8 +9,8 @@ const TAGS = {
 //Load Tags
 const tagOptions = document.getElementById("tag-filters");
 
-TAGS.week.forEach(item => {
-  console.log("Tag Build Week "+item.value);
+TAGS.subjects.forEach(item => {
+  console.log("Subject "+item.value);
   const tagButton = document.createElement("button");
   tagButton.innerHTML = "Hello World";
   tagOptions.appendChild(tagButton);
