@@ -82,44 +82,26 @@ function updateTracker()
 {
   console.log("Update Tracker");
 
-  //Update Weeks - Week A and then Week B - If else if not picked - if empty list show both
-  if (activeWeeks.length > 0)
-  {
-     //If Week A selected
-     if (activeWeeks.includes("A"))
-     {
-       console.log("Week A included");
-       document.getElementById("weekA").hidden = false;
-     }
-     else 
-     {
-       console.log("Week A NOT included");
-       document.getElementById("weekA").hidden = true;
-     }
-
-     //If Week B selected
-     if (activeWeeks.includes("B"))
-     {
-       console.log("Week B included");
-       document.getElementById("weekA").hidden = false;
-     }
-     else 
-     {
-       document.getElementById("weekB").hidden = true;
-     }
-       
-  }
-  else
-  {
-    document.getElementById("weekA").hidden = false;
-    document.getElementById("weekB").hidden = false;
-  }
+  //Grab tracker card
+  const trackerCard = document.getElementById("tracking-card");
+  trackerCard.innerHTML = "";
+  
+  //Go through each week and then add subjects for each week. With options for full sets - do selected first
+  activeWeeks.forEach(item => {
+    const weekH = document.createElement("h3");
+    weekH.textContent = "Week "+item;
+    trackerCard.appendChild(weekH);
+    //Add subjects selected under the week
+    activeSubjects.forEach(item => {
+       const subject = document.createElement("p");
+       subject.textContent = item;
+       trackerCard.appendChild(subject);
+       //Would now add the tasks
+    });
+  });
     
   
-  //Temporary Check to see what subjects have been picked
-  activeSubjects.forEach(item => {
-       console.log("Selected Subjects "+item);
-  });
+  
 }
 
 function showTags()
