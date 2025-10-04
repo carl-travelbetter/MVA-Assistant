@@ -113,5 +113,5 @@ function updateTracker()
 
 function showTags()
 {
-  document.getElementById("tag-options").hidden = false;
+  document.getElementById("filters").hidden = false;
 }
