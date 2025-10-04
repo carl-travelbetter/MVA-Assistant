@@ -6,6 +6,8 @@ const TAGS = {
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
+let activeSubjects = [];
+
 console.log("TAGS "+TAGS);
 console.log("Subject 2 "+TAGS.subjects[2]);
 //Load Tags
@@ -26,8 +28,7 @@ TAGS.week.forEach(item => {
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
       console.log("Clicked "+tagButton.dataset.tag);
-     // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
-       // .map(btn => btn.dataset.tag);
+      updateTracker();
     });
   tagOptions.appendChild(tagButton);
 });
@@ -40,15 +41,15 @@ tagOptions.appendChild(subjectHeader);
 //Load Subject Buttons
 TAGS.subjects.forEach(item => {
   const tagButton = document.createElement("button");
-  tagButton.className = "tag-btn";
+  tagButton.className = "subject-btn";
   tagButton.setAttribute("data-tag", item);
   tagButton.innerHTML = item;
   //Set listener so action can be taken
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
-      console.log("Clicked "+tagButton.dataset.tag);
-     // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
-       // .map(btn => btn.dataset.tag);
+      console.log("Clicked "+tagButton.dataset.tag);     
+      activeSubjects = Array.from(document.querySelectorAll('.subject-btn.active')).map(btn => btn.dataset.tag);        
+      updateTracker();
     });
   tagOptions.appendChild(tagButton);
 });
@@ -69,12 +70,20 @@ TAGS.tasks.forEach(item => {
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
       console.log("Clicked "+tagButton.dataset.tag);
-     // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
-       // .map(btn => btn.dataset.tag);
+      updateTracker();
     });
   
   tagOptions.appendChild(tagButton);
 });
+
+function updateTracker()
+{
+  console.log("Update Tracker");
+  //Temporary Check to see what subjects have been picked
+  activeSubjects.forEach(item => {
+       console.log("Selected Subjects "+item);
+  });
+}
 
 function showTags()
 {
