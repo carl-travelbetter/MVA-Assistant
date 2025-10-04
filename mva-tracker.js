@@ -12,8 +12,8 @@ console.log("Subject 2 "+TAGS.subjects[2]);
 const tagOptions = document.getElementById("tag-filters");
 
 TAGS.subjects.forEach(item => {
-  console.log("Subject "+item.value);
+  console.log("Subject "+item);
   const tagButton = document.createElement("button");
-  tagButton.innerHTML = "Hello World";
+  tagButton.innerHTML = item;
   tagOptions.appendChild(tagButton);
 });
