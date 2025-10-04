@@ -93,6 +93,7 @@ function updateTracker()
      }
      else 
      {
+       console.log("Week A NOT included");
        document.getElementById("weekA").hidden = true;
      }
 
