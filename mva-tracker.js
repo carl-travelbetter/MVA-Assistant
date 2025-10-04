@@ -7,7 +7,7 @@ const TAGS = {
 };
 
 //Load Tags
-const tagOptions = document.getElementById("tag-options");
+const tagOptions = document.getElementById("tag-filters");
 
 TAGS.week.forEach(item => {
   console.log("Tag Build Week "+item.value);
