@@ -2,7 +2,7 @@ console.log("MVA Tracker");
 
 const TAGS = {
   week: [ "A", "B"],
-  subjects: ["English", "Maths", "Science", "History", "Geography"],
+  subjects: ["English Lang", "English Lit", "Maths", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
