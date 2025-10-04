@@ -6,6 +6,18 @@ const TAGS = {
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
+const STORAGE_KEY = "mva_tracker";
+
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+if (state.position > 0)
+{
+  updateTracker();
+}
+else
+{
+  setStartPosition();
+}
+
 let activeWeeks = [];
 let activeSubjects = [];
 let activeTasks = [];
@@ -80,6 +92,27 @@ TAGS.tasks.forEach(item => {
   tagOptions.appendChild(tagButton);
 });
 
+function setStartPosition()
+{
+  console.log("Set Start Position");
+  //run through each week, subject, task and create new position object with start status set to not done. 
+  TAGS.week.forEach(week => {
+    TAGS.subject.forEach(subject => {
+      TAGS.task.forEach(task => {
+        //create new position object and add to start
+        const positionItem = {week:week, subject:subject, task:task, status:"Not Done"};
+        state.position.push(positionItem);
+      } );
+    });
+  });
+  saveState();
+}
+
+function saveState() {
+  console.log("Saving Budget and Spend Data...");
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
 function updateTracker()
 {
   console.log("Update Tracker");
@@ -105,10 +138,7 @@ function updateTracker()
          trackerCard.appendChild(task);
         });       
     });
-  });
-    
-  
-  
+  });       
 }
 
 function showTags()
