@@ -115,3 +115,8 @@ function showTags()
 {
   document.getElementById("filters").hidden = false;
 }
+
+function hideTags()
+{
+  document.getElementById("filters").hidden = true;
+}
