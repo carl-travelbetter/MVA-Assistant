@@ -7,7 +7,7 @@ const TAGS = {
 };
 
 console.log("TAGS "+TAGS);
-
+console.log("Subject 2 "+TAGS.subjects[2]);
 //Load Tags
 const tagOptions = document.getElementById("tag-filters");
 
