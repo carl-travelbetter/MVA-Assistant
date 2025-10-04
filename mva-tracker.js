@@ -11,6 +11,6 @@ const tagOptions = document.getElementById("tag-options");
 TAGS.week.forEach(item => {
   console.log("Tag Build Week "+item.value);
   const tagButton = document.createElement("button");
-  tagButton.innerHTML = "Week "+item.value;
-  tagOptions.appendChild("tagButton");
+  tagButton.innerHTML = "Hello World";
+  tagOptions.append("tagButton");
 });
