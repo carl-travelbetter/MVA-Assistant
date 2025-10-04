@@ -36,7 +36,7 @@ TAGS.tasks.forEach(item => {
   //Set listener so action can be taken
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
-      console.log("Clicked "+tagButton.dataset.tag");
+      console.log("Clicked "+tagButton.dataset.tag);
      // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
        // .map(btn => btn.dataset.tag);
     
