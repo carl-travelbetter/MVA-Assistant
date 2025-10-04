@@ -44,3 +44,8 @@ h3, h4, h5 {
     text-align:center;
     padding:10px;
 }
+
+.card li {
+   text-align:left;
+   margin-left:2rem;
+}
