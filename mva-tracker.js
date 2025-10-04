@@ -8,6 +8,7 @@ const TAGS = {
 
 let activeWeeks = [];
 let activeSubjects = [];
+let activeTasks = [];
 
 console.log("TAGS "+TAGS);
 console.log("Subject 2 "+TAGS.subjects[2]);
@@ -64,7 +65,7 @@ tagOptions.appendChild(taskHeader);
 //Load Task Buttons
 TAGS.tasks.forEach(item => {
   const tagButton = document.createElement("button");
-  tagButton.className = "tag-btn";
+  tagButton.className = "task-btn";
   tagButton.setAttribute("data-tag", item);
   tagButton.innerHTML = item;
 
@@ -72,6 +73,7 @@ TAGS.tasks.forEach(item => {
   tagButton.addEventListener("click", () => {
       tagButton.classList.toggle("active");
       console.log("Clicked "+tagButton.dataset.tag);
+      activeTasks = Array.from(document.querySelectorAll('.task-btn.active')).map(btn => btn.dataset.tag);   
       updateTracker();
     });
   
@@ -96,7 +98,12 @@ function updateTracker()
        const subject = document.createElement("p");
        subject.textContent = item;
        trackerCard.appendChild(subject);
-       //Would now add the tasks
+       //Add tasks for each subject
+         activeTasks.forEach(item => {
+         const task = document.createElement("p");
+         task.textContent = item;
+         trackerCard.appendChild(task);
+        });       
     });
   });
     
