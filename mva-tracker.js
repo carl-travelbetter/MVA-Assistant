@@ -75,3 +75,8 @@ TAGS.tasks.forEach(item => {
   
   tagOptions.appendChild(tagButton);
 });
+
+function showFilters()
+{
+  document.getElementById("tag-options").hidden = false;
+}
