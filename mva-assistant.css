@@ -112,6 +112,22 @@ h3, h4, h5 {
   border-color: #0077cc;
 }
 
+.task-btn {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;  
+  cursor: pointer;
+}
+
+.task-btn.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+}
+
 .tracking-card {
   margin-left: auto;
   margin-right: auto;
