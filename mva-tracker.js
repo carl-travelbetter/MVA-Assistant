@@ -6,6 +6,8 @@ const TAGS = {
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
+console.log("TAGS "+TAGS);
+
 //Load Tags
 const tagOptions = document.getElementById("tag-filters");
 
