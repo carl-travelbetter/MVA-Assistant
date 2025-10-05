@@ -6,6 +6,10 @@ const TAGS = {
   tasks: ["Prepare", "Share", "Develop", "Submit", "Build"]
 };
 
+let activeWeeks = [];
+let activeSubjects = [];
+let activeTasks = [];
+
 const STORAGE_KEY = "mva_tracker";
 
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
@@ -18,9 +22,7 @@ else
   setStartPosition();
 }
 
-let activeWeeks = [];
-let activeSubjects = [];
-let activeTasks = [];
+
 
 console.log("TAGS "+TAGS);
 console.log("Subject 2 "+TAGS.subjects[2]);
