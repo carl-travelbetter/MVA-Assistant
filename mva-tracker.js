@@ -124,15 +124,18 @@ function updateTracker()
   trackerCard.innerHTML = "";
   
   //Go through each week and then add subjects for each week. With options for full sets - do selected first
+  //Create the UL in the parent and then LI items in the child - then repeat for nested lists - google this
   activeWeeks.forEach(item => {
     const weekH = document.createElement("h3");
     weekH.textContent = "Week "+item;
     trackerCard.appendChild(weekH);
+    //Subject list in the week
+    const subjectList = document.createElment("ul");
     //Add subjects selected under the week
     activeSubjects.forEach(item => {
-       const subject = document.createElement("p");
+       const subjectItem = document.createElement("li");
        subject.textContent = item;
-       trackerCard.appendChild(subject);
+       subjectList.appendChild(subjectItem);
        //Add tasks for each subject
          activeTasks.forEach(item => {
          const task = document.createElement("p");
@@ -140,6 +143,8 @@ function updateTracker()
          trackerCard.appendChild(task);
         });       
     });
+  //Add the subject list to the tracker card  
+  trackerCard.appendChild(subjectList);
   });       
 }
 
