@@ -143,13 +143,16 @@ function updateTracker()
          let taskID = item;
          const task = document.createElement("li");
          const taskName = document.createElement("span");
+         taskName.className = "span-task";  
          taskName.textContent = item;
          //Get the Status of the task, for subject, for week  
          const status = getState(week, subject, taskID);
          console.log("Status Returned = "+status);  
          const taskStatus = document.createElement("span");
+         taskStatus.className = "span-status";    
          taskStatus.textContent = status;
          const changeButton = document.createElement("button");
+         changeButton.className = "span-change";  
          changeButton.textContent = "CHANGE";
            //Create an action when the button is pressed  
             changeButton.addEventListener("click", () => {
