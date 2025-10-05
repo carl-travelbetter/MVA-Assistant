@@ -136,6 +136,7 @@ function updateTracker()
     activeSubjects.forEach(item => {
        let subject = item;
        const subjectItem = document.createElement("h4");
+       subjectItem.className = "subject-header";
        subjectItem.textContent = item;
        //Add Subject Header
        trackerCard.appendChild(subjectItem);
