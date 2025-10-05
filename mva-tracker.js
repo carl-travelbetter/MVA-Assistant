@@ -150,7 +150,12 @@ function updateTracker()
          const taskStatus = document.createElement("span");
          taskStatus.textContent = status;
          const changeButton = document.createElement("button");
-         changeButton.textContent = "CHANGE";  
+         changeButton.textContent = "CHANGE";
+           //Create an action when the button is pressed  
+            changeButton.addEventListener("click", () => {
+              changeStatus(week, subject, taskID);
+              updateTracker();
+            });    
          task.appendChild(taskName);
          task.appendChild(taskStatus);
          task.appendChild(changeButton);  
@@ -192,17 +197,17 @@ function getState(week, subject, task)
   }
 } //End of Get State
 
-function updateMathsSubmit()
+function changeStatus(week, subject, task)
 {
   console.log("Update Maths Submit...");
-  console.log("Looking for week A, Maths, Submit");
+  console.log("Looking for "+week+subject+task);
   const idx = state.position.findIndex(p =>
-    p.week==="A" && p.subject==="Maths" && p.task==="Submit"
+    p.week===week && p.subject===subject && p.task===task
   );
   //If we don't find a match - else
   if (idx === -1)
   {
-    console.log("Couldn't find Week A Maths Submit");
+    console.log("Couldn't find that combo");
   }
   else
   {
