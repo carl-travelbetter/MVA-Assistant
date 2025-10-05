@@ -135,13 +135,15 @@ function updateTracker()
     activeSubjects.forEach(item => {
        const subjectItem = document.createElement("li");
        subjectItem.textContent = item;
-       subjectList.appendChild(subjectItem);
+       const taskList = document.createElement("ul");
        //Add tasks for each subject
          activeTasks.forEach(item => {
-         const task = document.createElement("p");
+         const task = document.createElement("li");
          task.textContent = item;
-         trackerCard.appendChild(task);
-        });       
+         taskList.appendChild(task);
+        });
+      subjectItem.appendChild(taskList);
+      subjectList.appendChild(subjectItem);
     });
   //Add the subject list to the tracker card  
   trackerCard.appendChild(subjectList);
