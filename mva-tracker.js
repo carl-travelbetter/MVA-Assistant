@@ -134,7 +134,7 @@ function updateTracker()
     //Add subjects selected under the week
     activeSubjects.forEach(item => {
        const subjectItem = document.createElement("li");
-       subject.textContent = item;
+       subjectItem.textContent = item;
        subjectList.appendChild(subjectItem);
        //Add tasks for each subject
          activeTasks.forEach(item => {
