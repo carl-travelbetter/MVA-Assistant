@@ -142,9 +142,18 @@ function updateTracker()
          activeTasks.forEach(item => {
          let taskID = item;
          const task = document.createElement("li");
+         const taskName = document.createElement("span");
+         taskName.textContent = item;
+         //Get the Status of the task, for subject, for week  
          const status = getState(week, subject, taskID);
          console.log("Status Returned = "+status);  
-         task.textContent = item+" -"+status;
+         const taskStatus = document.createElement("span");
+         taskStatus.textContent = status;
+         const changeButton = document.createElement("button");
+         changeButton.textContent = "CHANGE";  
+         task.appendChild(taskName);
+         task.appendChild(taskStatus);
+         task.appendChild(changeButton);  
          taskList.appendChild(task);
         });
       subjectItem.appendChild(taskList);
