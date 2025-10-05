@@ -130,13 +130,15 @@ function updateTracker()
     const weekH = document.createElement("h3");
     weekH.textContent = "Week "+item;
     trackerCard.appendChild(weekH);
-    //Subject list in the week
-    const subjectList = document.createElement("ul");
+    //Subject list in the week - Temp it out for a header
+    //const subjectList = document.createElement("ul");
     //Add subjects selected under the week
     activeSubjects.forEach(item => {
        let subject = item;
-       const subjectItem = document.createElement("li");
+       const subjectItem = document.createElement("h4");
        subjectItem.textContent = item;
+       //Add Subject Header
+       trackerCard.appendChild(subjectItem);
        const taskList = document.createElement("ul");
        //Add tasks for each subject
          activeTasks.forEach(item => {
@@ -164,11 +166,12 @@ function updateTracker()
          task.appendChild(changeButton);  
          taskList.appendChild(task);
         });
-      subjectItem.appendChild(taskList);
-      subjectList.appendChild(subjectItem);
+      
+      trackerCard.appendChild(taskList);
+      
     });
   //Add the subject list to the tracker card  
-  trackerCard.appendChild(subjectList);
+  //trackerCard.appendChild(subjectList);
   });       
 }
 
