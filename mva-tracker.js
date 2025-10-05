@@ -9,7 +9,7 @@ const TAGS = {
 const STORAGE_KEY = "mva_tracker";
 
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
-if (state.position > 0)
+if (state.position.length > 0)
 {
   updateTracker();
 }
@@ -165,7 +165,7 @@ function updateMathsSubmit()
   else
   {
     //lets return the status for now
-    const status = state.position[idk].status;
+    const status = state.position[idx].status;
     console.log("Position Status is "+status);
   }
 }
