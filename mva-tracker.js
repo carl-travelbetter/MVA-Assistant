@@ -160,6 +160,7 @@ function updateMathsSubmit()
   const idx = state.position.findIndex(p =>
     p.week==="A" && p.subject==="Maths" && p.task==="Submit"
   );
+  //If we don't find a match - else
   if (idx === -1)
   {
     console.log("Couldn't find Week A Maths Submit");
@@ -167,7 +168,15 @@ function updateMathsSubmit()
   else
   {
     //lets update the status now
-    state.position[idx].status = "DONE";
+    const statusCheck = state.position[idx].status;
+    if (statusCheck === "DONE")
+    {
+      state.position[idx].status = "NOT DONE";
+    }
+    else
+    {
+      state.position[idx].status = "DONE";
+    }
     const status = state.position[idx].status;
     console.log("Position Status is "+status);
     saveState();
