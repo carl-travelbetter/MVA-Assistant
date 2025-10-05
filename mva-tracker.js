@@ -126,6 +126,7 @@ function updateTracker()
   //Go through each week and then add subjects for each week. With options for full sets - do selected first
   //Create the UL in the parent and then LI items in the child - then repeat for nested lists - google this
   activeWeeks.forEach(item => {
+    let week = item;
     const weekH = document.createElement("h3");
     weekH.textContent = "Week "+item;
     trackerCard.appendChild(weekH);
@@ -133,13 +134,17 @@ function updateTracker()
     const subjectList = document.createElement("ul");
     //Add subjects selected under the week
     activeSubjects.forEach(item => {
+       let subject = item;
        const subjectItem = document.createElement("li");
        subjectItem.textContent = item;
        const taskList = document.createElement("ul");
        //Add tasks for each subject
          activeTasks.forEach(item => {
+         let taskID = item;
          const task = document.createElement("li");
-         task.textContent = item;
+         const status = getState(week, subject, taskID);
+         console.log("Status Returned = "+status);  
+         task.textContent = item+" -"+status;
          taskList.appendChild(task);
         });
       subjectItem.appendChild(taskList);
@@ -159,6 +164,24 @@ function hideTags()
 {
   document.getElementById("filters").hidden = true;
 }
+
+function getState(week, subject, task)
+{
+    //Take the inputs and return the status
+    const idx = state.position.findIndex(p =>
+    p.week===week && p.subject===subject && p.task===task
+  );
+  //If we don't find a match - else
+  if (idx === -1)
+  {
+    console.log("Couldn't find a Match to that Combo");
+  }
+  else
+  {
+    //return the status in that position
+    return state.position[idx].status;    
+  }
+} //End of Get State
 
 function updateMathsSubmit()
 {
