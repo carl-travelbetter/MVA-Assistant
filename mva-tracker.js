@@ -150,3 +150,22 @@ function hideTags()
 {
   document.getElementById("filters").hidden = true;
 }
+
+function updateMathsSubmit()
+{
+  console.log("Update Maths Submit...");
+  console.log("Looking for week A, Maths, Submit");
+  const idx = state.position.findIndex(p =>
+    p.week==="A" && p.subject==="Maths" && p.task==="Submit"
+  );
+  if (idx === -1)
+  {
+    console.log("Couldn't find Week A Maths Submit");
+  }
+  else
+  {
+    //lets return the status for now
+    const status = state.position[idk].status;
+    console.log("Position Status is "+status);
+  }
+}
