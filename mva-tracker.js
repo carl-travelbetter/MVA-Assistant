@@ -166,8 +166,10 @@ function updateMathsSubmit()
   }
   else
   {
-    //lets return the status for now
+    //lets update the status now
+    state.position[idx].status = "DONE";
     const status = state.position[idx].status;
     console.log("Position Status is "+status);
+    saveState();
   }
 }
