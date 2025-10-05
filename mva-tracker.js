@@ -130,7 +130,7 @@ function updateTracker()
     weekH.textContent = "Week "+item;
     trackerCard.appendChild(weekH);
     //Subject list in the week
-    const subjectList = document.createElment("ul");
+    const subjectList = document.createElement("ul");
     //Add subjects selected under the week
     activeSubjects.forEach(item => {
        const subjectItem = document.createElement("li");
