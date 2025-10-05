@@ -109,7 +109,7 @@ function setStartPosition()
 }
 
 function saveState() {
-  console.log("Saving Budget and Spend Data...");
+  console.log("Saving Task Status...");
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
