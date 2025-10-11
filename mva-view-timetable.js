@@ -4,6 +4,7 @@ let weekDays = [];
   .then(data => {
     weekDays = data;
     console.log("Week Days Loaded:", weekDays);
+    createControlBar();
   })
   .catch(error => console.error("Error loading week days", error));
 
@@ -13,7 +14,6 @@ let timetable = [];
   .then(data => {
     timetable = data;
     console.log("Time Table Loaded:", timetable);
-    createControlBar();
   })
   .catch(error => console.error("Error loading timetable", error));
 
@@ -23,7 +23,7 @@ function createControlBar()
 
  //Create day buttons
  const controlBar = document.getElementById("control-bar");
- weekDays.forEach (week => {
+ weekDays.week.forEach (week => {
   const weekLabel = document.createElement("h2");
   weekLabel.textContent = week;
   controlBar.appendChild("weekLabel");
