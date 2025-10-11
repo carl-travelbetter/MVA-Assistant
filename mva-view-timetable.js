@@ -23,7 +23,13 @@ function createControlBar()
 
  //Create day buttons
  const controlBar = document.getElementById("control-bar");
+ //Work through the A days and then the B days
  weekDays.week.A.forEach (wd => {
+  console.log("Week "+wd.day);
+ });
+
+ //Work though the B Days
+ weekDays.week.B.forEach (wd => {
   console.log("Week "+wd.day);
  });
 }
