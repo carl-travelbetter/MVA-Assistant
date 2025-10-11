@@ -37,7 +37,7 @@ function createControlBar()
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
       selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
-      doSomething();
+      updateWeekA();
     });
   controlBar.appendChild(dayButton);
  });
@@ -56,7 +56,7 @@ function createControlBar()
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
       selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
-      doSomething();
+      updateWeekB();
     });
   controlBar.appendChild(dayButton);
  });
