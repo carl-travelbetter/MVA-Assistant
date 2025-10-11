@@ -23,13 +23,35 @@ function createControlBar()
 
  //Create day buttons
  const controlBar = document.getElementById("control-bar");
+ const weekAControlHeader = document.createElement("h2");
+ weekAControlHeader.textContent = "Week A";
+ controlBar.appendChild(weekAControlHeader);
  //Work through the A days and then the B days
  weekDays.week.A.forEach (wd => {
-  console.log("Week "+wd.day);
+  const dayButton = document.createElement("button");
+  dayButton.className = "week-btn";
+  dayButton.setAttribute("data-tag", wd.value);
+  dayButton.innerHTML = wd.day;
+  //Set listener so action can be taken
+  dayButton.addEventListener("click", () => {
+      dayButton.classList.toggle("active");
+      console.log("Clicked "+dayButton.dataset.tag);
+      selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      doSomething();
+    });
+  controlBar.appendChild(dayButton);
  });
-
+ 
+ const weekBControlHeader = document.createElement("h2");
+ weekBControlHeader.textContent = "Week B";
+ controlBar.appendChild(weekBControlHeader);
  //Work though the B Days
  weekDays.week.B.forEach (wd => {
   console.log("Week "+wd.day);
  });
+}
+
+function doSomething()
+{
+ console.log("Do Something...");
 }
