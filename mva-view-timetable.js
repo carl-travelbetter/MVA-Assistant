@@ -68,8 +68,8 @@ function updateWeekA()
 {
   console.log("Update Week A Data...");
   //filter the timetable by the selected days
-  const weekInfo = timetable.filter(day =>
-       selectedADays.length === 0 || selectedADays.every(match => timetable.day(match))
+  const weekInfo = timetable.filter(entry =>
+       selectedADays.length === 0 || selectedADays.every(match => entry.day(match))
    );
  
    weekInfo.forEach(entry => {
