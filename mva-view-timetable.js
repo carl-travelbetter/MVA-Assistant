@@ -24,8 +24,6 @@ function createControlBar()
  //Create day buttons
  const controlBar = document.getElementById("control-bar");
  weekDays.week.A.forEach (week => {
-  const weekLabel = document.createElement("h2");
-  weekLabel.textContent = week.value;
-  controlBar.appendChild("weekLabel");
+  console.log("Week "+week);
  });
 }
