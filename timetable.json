@@ -2,30 +2,30 @@
   "Week": {
     "A" : [
       {
-        "NAME":"Maths 1",
-        "Day":"2",
-        "Prep":"1",
-        "Submit":"3"
+        "subject":"Maths 1",
+        "lessonDay":2,
+        "prepDeadline":1,
+        "submitDeadline":3
       },
       {
-        "NAME":"Maths 2",
-        "Day":"4",
-        "Prep":"3",
-        "Submit":"5"
+        "subject":"Maths 2",
+        "lessonDay":4,
+        "prepDeadline":4,
+        "submitDeadline":5
       }
     ],
     "B" : [
       {
-        "NAME":"Maths 3",
-        "Day":"7",
-        "Prep":"6",
-        "Submit":"8"
+        "subject":"Maths 3",
+        "lessonDay":6,
+        "prepDeadline":6,
+        "submitDeadline":7
       },
       {
-        "NAME":"Maths 4",
-        "Day":"9",
-        "Prep":"9",
-        "Submit":"10"
+        "subject":"Maths 4",
+        "lessonDay":8,
+        "prepDeadline":8,
+        "submitDeadline":10
       }
     ]
   }
