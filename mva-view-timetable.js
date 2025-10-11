@@ -47,11 +47,27 @@ function createControlBar()
  controlBar.appendChild(weekBControlHeader);
  //Work though the B Days
  weekDays.week.B.forEach (wd => {
-  console.log("Week "+wd.day);
+  const dayButton = document.createElement("button");
+  dayButton.className = "week-btn";
+  dayButton.setAttribute("data-tag", wd.value);
+  dayButton.innerHTML = wd.day;
+  //Set listener so action can be taken
+  dayButton.addEventListener("click", () => {
+      dayButton.classList.toggle("active");
+      console.log("Clicked "+dayButton.dataset.tag);
+      selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      doSomething();
+    });
+  controlBar.appendChild(dayButton);
  });
 }
 
-function doSomething()
+function updateWeekA()
 {
- console.log("Do Something...");
+ console.log("Update Week A Data...");
+}
+
+function updateWeekB()
+{
+ console.log("Update Week B Data...");
 }
