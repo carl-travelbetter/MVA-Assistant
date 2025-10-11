@@ -3,13 +3,13 @@
     "A" : [
       {
         "NAME":"Maths 1",
-        "Day":"2".
+        "Day":"2",
         "Prep":"1",
         "Submit":"3"
       },
       {
         "NAME":"Maths 2",
-        "Day":"4".
+        "Day":"4",
         "Prep":"3",
         "Submit":"5"
       }
@@ -17,13 +17,13 @@
     "B" : [
       {
         "NAME":"Maths 3",
-        "Day":"7".
+        "Day":"7",
         "Prep":"6",
         "Submit":"8"
       },
       {
         "NAME":"Maths 4",
-        "Day":"9".
+        "Day":"9",
         "Prep":"9",
         "Submit":"10"
       }
