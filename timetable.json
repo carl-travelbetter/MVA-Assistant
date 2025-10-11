@@ -1,34 +1,8 @@
-{
-  "Week": {
-    "A" : [
-      {
-        "subject":"Maths 1",
-        "lessonDay":2,
-        "prepDeadline":1,
-        "submitDeadline":3
-      },
-      {
-        "subject":"Maths 2",
-        "lessonDay":4,
-        "prepDeadline":4,
-        "submitDeadline":5
-      }
-    ],
-    "B" : [
-      {
-        "subject":"Maths 3",
-        "lessonDay":6,
-        "prepDeadline":6,
-        "submitDeadline":7
-      },
-      {
-        "subject":"Maths 4",
-        "lessonDay":8,
-        "prepDeadline":8,
-        "submitDeadline":10
-      }
-    ]
-  }
+[
+  {"subject":"Maths 1", "week":"A", "day":2, "prep":2, "submit":3 },
+  {"subject":"Maths 2", "week":"A", "day":5, "prep":5, "submit":6 },
+  {"subject":"Maths 3", "week":"B", "day":7, "prep":7, "submit":9 },
+  {"subject":"Maths 4", "week":"B", "day":10, "prep":10, "submit":1 }
 }
   
 
