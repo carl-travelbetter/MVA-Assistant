@@ -1,3 +1,5 @@
+let selectedADays = [];
+let selectedBDays = [];
 let weekDays = [];
  fetch('week-days.json')
   .then(response => response.json())
@@ -36,7 +38,7 @@ function createControlBar()
   dayButton.addEventListener("click", () => {
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
-      selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      selectedADays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
       updateWeekA();
     });
   controlBar.appendChild(dayButton);
@@ -55,7 +57,7 @@ function createControlBar()
   dayButton.addEventListener("click", () => {
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
-      selectedDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      selectedBDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
       updateWeekB();
     });
   controlBar.appendChild(dayButton);
@@ -64,7 +66,15 @@ function createControlBar()
 
 function updateWeekA()
 {
- console.log("Update Week A Data...");
+  console.log("Update Week A Data...");
+  //filter the timetable by the selected days
+  const weekInfo = timetable.filter(day =>
+       selectedADays.length === 0 || selectedADays.every(match => timetable.day(match))
+   );
+ 
+   weekInfo.forEach(entry => {
+    console.log("Filtered Week A "+weekInfo.subject);
+   });
 }
 
 function updateWeekB()
