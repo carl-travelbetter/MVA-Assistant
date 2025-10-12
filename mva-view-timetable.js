@@ -73,7 +73,7 @@ function updateWeekA()
        selectedADays.length === 0 || selectedADays.every(match => entry.day(match))
    );*/
 
- selectedADays.fprEach (day => {
+ selectedADays.forEach (day => {
   console.log("Selected Day "+day);
  });
  
