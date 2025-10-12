@@ -68,13 +68,20 @@ function updateWeekA()
 {
   console.log("Update Week A Data...");
   //filter the timetable by the selected days
- 
 
- selectedADays.forEach (day => {
-  console.log("Selected Day "+day);
- });
+  //Grab the week a timetable card
+  const weekACard = document.getElementById("week-a-timetable");
+  weekACard.innerHTML = "";
+  //Add Header back in 
+  const weekAHeader = document.createElement("h2");
+  weekAHeader.textContent = "Week A Timetable";
+  weekACard.appendChild(weekAHeader);
  
- 
+  selectedADays.forEach (day => {
+   console.log("Selected Day "+day);
+  });
+  
+  //Filter the timetable by the days selected
   const newArr = timetable.filter(entry => 
     selectedADays.length === 0 || selectedADays.some(match => entry.day == match)
    );
@@ -84,6 +91,10 @@ function updateWeekA()
     console.log("New Array is Array "+newArr.length);
     newArr.forEach (entry => {
      console.log("New Array Entry Subject "+entry.subject);
+     //Output to the week a card - starting simple
+     const output = document.createElement("p");
+     output.textContent = "Day "+entry.day+" Subject "+entry.subject;
+     weekACard.appendChild(output);
     });
    }
    else
