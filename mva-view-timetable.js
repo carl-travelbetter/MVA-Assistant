@@ -74,21 +74,14 @@ function updateWeekA()
   console.log("Selected Day "+day);
  });
  
-  timetable.forEach (entry => {
-   console.log("Entry Subject "+entry.day);
-  });
-
-  if (Array.isArray(timetable))
-  { console.log("Timetable is an array"); }
-  else {console.log("Timetable is not an array");}
-
+ 
   const newArr = timetable.filter(entry => 
-    selectedADays.length === 0 || selectedADays.every(match => entry.day === match)
+    selectedADays.length === 0 || selectedADays.every(match => entry.day == match)
    );
   
    if (Array.isArray(newArr))
    {
-    console.log("Timetable, filtered");
+    console.log("New Array is Array "+newArr.length);
     newArr.forEach (entry => {
      console.log("New Array Entry Subject "+entry.subject);
     });
