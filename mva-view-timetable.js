@@ -72,9 +72,13 @@ function updateWeekA()
   const weekInfo = timetable.filter(entry =>
        selectedADays.length === 0 || selectedADays.every(match => entry.day(match))
    );*/
+
+ selectedADays.fprEach (day => {
+  console.log("Selected Day "+day);
+ });
  
   timetable.forEach (entry => {
-   console.log("Entry Subject "+entry.subject);
+   console.log("Entry Subject "+entry.day);
   });
 }
 
