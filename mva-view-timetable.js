@@ -78,12 +78,12 @@ function updateWeekA()
    console.log("Entry Subject "+entry.day);
   });
 
-  if (timetable.isArray)
+  if (Array.isArray(timetable))
   { console.log("Timetable is an array"); }
   else {console.log("Timetable is not an array");}
 
   const newArr = timetable.filter(entry => entry.day === 2);
-   if (newArr.isArray)
+   if (Array.isArray(newArr))
    {
     console.log("Timetable, filtered");
    }
