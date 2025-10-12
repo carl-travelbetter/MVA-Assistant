@@ -76,7 +76,7 @@ function updateWeekA()
  
  
   const newArr = timetable.filter(entry => 
-    selectedADays.length === 0 || selectedADays.every(match => entry.day == match)
+    selectedADays.length === 0 || selectedADays.some(match => entry.day == match)
    );
   
    if (Array.isArray(newArr))
