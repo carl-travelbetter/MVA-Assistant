@@ -80,11 +80,18 @@ function updateWeekA()
   selectedADays.forEach (day => {
    console.log("Selected Day "+day);
   });
-  
+
+ if (selectedADays.length > 0)
+ {
   //Filter the timetable by the days selected
   const newArr = timetable.filter(entry => 
     selectedADays.length === 0 || selectedADays.some(match => entry.day == match)
    );
+ }
+ else 
+ {
+  const newArr = [];
+ }
   
    if (Array.isArray(newArr))
    {
