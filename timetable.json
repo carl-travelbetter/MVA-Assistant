@@ -5,7 +5,9 @@
   {"subject":"Maths 4", "week":"B", "day":10, "prep":10, "submit":1 },
   {"subject":"Biology 1", "week":"A", "day":1, "prep":1, "submit":1 },
   {"subject":"English Lang 1", "week":"A", "day":1, "prep":1, "submit":1 },
-  {"subject":"English Lang 2", "week":"A", "day":2, "prep":2, "submit":1 }
+  {"subject":"English Lang 2", "week":"A", "day":2, "prep":2, "submit":1 },
+  {"subject":"English Lang 3", "week":"B", "day":6, "prep":6, "submit":1 },
+  {"subject":"English Lang 4", "week":"B", "day":7, "prep":7, "submit":1 }
 ]
   
 
