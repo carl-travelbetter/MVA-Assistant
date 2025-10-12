@@ -68,10 +68,7 @@ function updateWeekA()
 {
   console.log("Update Week A Data...");
   //filter the timetable by the selected days
- /*
-  const weekInfo = timetable.filter(entry =>
-       selectedADays.length === 0 || selectedADays.every(match => entry.day(match))
-   );*/
+ 
 
  selectedADays.forEach (day => {
   console.log("Selected Day "+day);
@@ -81,8 +78,12 @@ function updateWeekA()
    console.log("Entry Subject "+entry.day);
   });
 
-  const subjectOnDays = timetable.filter(entry => entry.subject == "Maths 1");
-   if (subjectOnDays.isArray)
+  if (timetable.isArray)
+  { console.log("Timetable is an array"); }
+  else {console.log("Timetable is not an array");}
+
+  const newArr = timetable.filter(entry => entry.day === 2);
+   if (newArr.isArray)
    {
     console.log("Timetable, filtered");
    }
