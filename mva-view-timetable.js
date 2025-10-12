@@ -31,14 +31,14 @@ function createControlBar()
  //Work through the A days and then the B days
  weekDays.week.A.forEach (wd => {
   const dayButton = document.createElement("button");
-  dayButton.className = "week-btn";
+  dayButton.className = "week-a-btn";
   dayButton.setAttribute("data-tag", wd.value);
   dayButton.innerHTML = wd.day;
   //Set listener so action can be taken
   dayButton.addEventListener("click", () => {
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
-      selectedADays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      selectedADays = Array.from(document.querySelectorAll('.week-a-btn.active')).map(btn => btn.dataset.tag);       
       updateWeekA();
     });
   controlBar.appendChild(dayButton);
@@ -50,14 +50,14 @@ function createControlBar()
  //Work though the B Days
  weekDays.week.B.forEach (wd => {
   const dayButton = document.createElement("button");
-  dayButton.className = "week-btn";
+  dayButton.className = "week-b-btn";
   dayButton.setAttribute("data-tag", wd.value);
   dayButton.innerHTML = wd.day;
   //Set listener so action can be taken
   dayButton.addEventListener("click", () => {
       dayButton.classList.toggle("active");
       console.log("Clicked "+dayButton.dataset.tag);
-      selectedBDays = Array.from(document.querySelectorAll('.week-btn.active')).map(btn => btn.dataset.tag);       
+      selectedBDays = Array.from(document.querySelectorAll('.week-b-btn.active')).map(btn => btn.dataset.tag);       
       updateWeekB();
     });
   controlBar.appendChild(dayButton);
