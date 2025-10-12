@@ -111,7 +111,7 @@ function updateWeekB()
   const weekBCard = document.getElementById("week-b-timetable");
   weekBCard.innerHTML = "";
   //Add Header back in 
-  const weekAHeader = document.createElement("h2");
+  const weekBHeader = document.createElement("h2");
   weekBHeader.textContent = "Week B Timetable";
   weekBCard.appendChild(weekBHeader);
  
