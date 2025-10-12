@@ -126,11 +126,18 @@ function updateWeekB()
   selectedBDays.forEach (day => {
    console.log("Selected Day "+day);
   });
-  
+
+ let newArr = []; 
+ if (selectedBDays.length > 0)
+ {
   //Filter the timetable by the days selected
-  const newArr = timetable.filter(entry => 
+  newArr = timetable.filter(entry => 
     selectedBDays.length === 0 || selectedBDays.some(match => entry.day == match)
    );
+ }
+ else
+ { console.log("No Week B Days Selected"); }
+  
   
    if (Array.isArray(newArr))
    {
