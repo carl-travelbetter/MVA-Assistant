@@ -89,6 +89,9 @@ function updateWeekA()
    if (Array.isArray(newArr))
    {
     console.log("Timetable, filtered");
+    newArr.forEach (entry => {
+     console.log("New Array Entry Subject "+entry.subject);
+    });
    }
    else
    {
