@@ -83,7 +83,7 @@ function updateWeekA()
   else {console.log("Timetable is not an array");}
 
   const newArr = timetable.filter(entry => 
-    selectedADays.length === 0 || selectedADays.every(match => entry.day.includes(match))
+    selectedADays.length === 0 || selectedADays.every(match => entry.day === match)
    );
   
    if (Array.isArray(newArr))
