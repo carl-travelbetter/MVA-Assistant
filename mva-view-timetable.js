@@ -106,4 +106,37 @@ function updateWeekA()
 function updateWeekB()
 {
  console.log("Update Week B Data...");
+
+ //Grab the week a timetable card
+  const weekBCard = document.getElementById("week-b-timetable");
+  weekBCard.innerHTML = "";
+  //Add Header back in 
+  const weekAHeader = document.createElement("h2");
+  weekBHeader.textContent = "Week B Timetable";
+  weekBCard.appendChild(weekBHeader);
+ 
+  selectedBDays.forEach (day => {
+   console.log("Selected Day "+day);
+  });
+  
+  //Filter the timetable by the days selected
+  const newArr = timetable.filter(entry => 
+    selectedBDays.length === 0 || selectedBDays.some(match => entry.day == match)
+   );
+  
+   if (Array.isArray(newArr))
+   {
+    console.log("New Array is Array "+newArr.length);
+    newArr.forEach (entry => {
+     console.log("New Array Entry Subject "+entry.subject);
+     //Output to the week a card - starting simple
+     const output = document.createElement("p");
+     output.textContent = "Day "+entry.day+" Subject "+entry.subject;
+     weekBCard.appendChild(output);
+    });
+   }
+   else
+   {
+     console.log("Timetable filter has failed");
+   }
 }
