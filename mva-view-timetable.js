@@ -80,6 +80,8 @@ function updateWeekA()
   timetable.forEach (entry => {
    console.log("Entry Subject "+entry.day);
   });
+
+  const subjectOnDays = timetable.filter(entry => entry.day == 2);
 }
 
 function updateWeekB()
