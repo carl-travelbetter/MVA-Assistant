@@ -81,16 +81,17 @@ function updateWeekA()
    console.log("Selected Day "+day);
   });
 
+ let newArr = []; 
  if (selectedADays.length > 0)
  {
   //Filter the timetable by the days selected
-  const newArr = timetable.filter(entry => 
+  newArr = timetable.filter(entry => 
     selectedADays.length === 0 || selectedADays.some(match => entry.day == match)
    );
  }
  else 
  {
-  const newArr = [];
+  console.log("No Week A days selected");
  }
   
    if (Array.isArray(newArr))
