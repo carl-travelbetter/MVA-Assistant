@@ -84,6 +84,7 @@ function updateWeekA()
  let newArr = []; 
  if (selectedADays.length > 0)
  {
+   selectedADays.sort(function(a, b){return a - b});
   //Filter the timetable by the days selected
   newArr = timetable.filter(entry => 
     selectedADays.length === 0 || selectedADays.some(match => entry.day == match)
