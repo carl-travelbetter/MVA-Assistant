@@ -81,7 +81,7 @@ function updateWeekA()
    console.log("Entry Subject "+entry.day);
   });
 
-  const subjectOnDays = timetable.filter(entry => entry.day > 1);
+  const subjectOnDays = timetable.filter(entry => entry.day === 2);
    if (subjectOnDays.isArray)
    {
     console.log("Timetable, filtered");
