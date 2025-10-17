@@ -17,19 +17,19 @@ function updateToDoList()
 
 }
 
-//work out and show the next DL prioirty task
+//work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
 function nextDLPriority()
 {
 
 }
 
-//Work out and show the next priority task
+//Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
 function nextSLPriority()
 {
  
 } 
 
-//Update the done list when an item is marked as done
+//Update the done list when an item is marked as done - with an option to move to to do if requireed
 function updateDoneList()
 {
 
