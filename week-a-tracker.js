@@ -21,11 +21,13 @@ if (state.position.length > 0)
 {
   //Do something as we already have data
  updateToDoList();
+ updateDoneList();
 }
 else
 {
   setSLStartPosition();
   updateToDoList();
+  updateDoneList();
 }
 
 //load state data
@@ -58,9 +60,9 @@ function updateToDoList()
   console.log("Update To Do List");
   //Grab the state, find all elements that are not done and add to the list
   const aToDoList = document.getElementById("a-single-to-do");
-  let filteredResults = [];
-  //filter the list by those items not done
-  //Temporay Review of state results
+  
+  
+ //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
   
   if (item.status == "Not Done")
@@ -69,6 +71,10 @@ function updateToDoList()
      const to_do_task = document.createElement("p");
      to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
      aToDoList.appendChild(to_do_task);
+     if (item.subject == "Biology")
+     {
+        item.status = "Done";
+     }
   }
   
  });
@@ -93,13 +99,19 @@ function nextSLPriority()
 function updateDoneList()
 {
   //Grab the state, find all elements that are done and add to the list
-  const aToDoList = document.getElementById("a-single-done");
-  let filteredResults = [];
-  //filter the list by those items not done
-  filteresResults = state.position.filter(position => position.status == "Done");
-  filteredResults.forEach (result => {
-   console.log("Result "+result.subject+" "+result.task);
-  });
+  const aDoneList = document.getElementById("a-single-done");
+  //Loop through and add the not done items to the to do list
+ state.position.forEach(item => {
+  
+  if (item.status == "Done")
+  {
+     console.log("Adding to the to-do pile");
+     const done_task = document.createElement("p");
+     done_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     aDoneList.appendChild(done_task);
+  }
+  
+ });
 }
 
 //Reset the week
