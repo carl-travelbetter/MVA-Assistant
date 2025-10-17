@@ -69,6 +69,12 @@ function updateToDoList()
   }
   else
   { console.log("No Tasks for the To Do List"); }
+
+  //Temporay Review of state results
+ state.position.forEach(item => {
+  console.log("Subject "+item.subject+ " Task "+item.task+" Status "+item.status);
+ });
+ 
 }
 
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
