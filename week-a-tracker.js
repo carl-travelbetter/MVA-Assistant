@@ -25,6 +25,7 @@ if (state.position.length > 0)
 else
 {
   setSLStartPosition();
+  updateToDoList();
 }
 
 //load state data
@@ -54,14 +55,20 @@ function saveState() {
 //Update the to do list when loading, when reset, or when an item is marked as not done
 function updateToDoList()
 {
+  console.log("Update To Do List");
   //Grab the state, find all elements that are not done and add to the list
   const aToDoList = document.getElementById("a-single-to-do");
   let filteredResults = [];
   //filter the list by those items not done
-  filteresResults = state.position.filter(item => item.status == "Not Done");
-  filteredResults.forEach (item => {
-   console.log("Result "+item.subject+" "+item.task);
-  });
+  filteresResults = state.position.filter(item => item.status === "Not Done");
+  if (filteredResults.length > 0)
+  {
+    filteredResults.forEach (item => {
+     console.log("Result "+item.subject+" "+item.task);
+    });
+  }
+  else
+  { console.log("No Tasks for the To Do List"); }
 }
 
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
