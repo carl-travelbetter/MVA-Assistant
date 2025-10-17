@@ -11,7 +11,7 @@ let slTimetable = [];
 
 const SLTAGS = {
   subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
-  tasks: ["P&S", "Develop", "Submit", "Build"]
+  tasks: ["P&S", "Build", "Develop"]
 };
 
 const STORAGE_KEY = "mva_a_sl_tracker";
