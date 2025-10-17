@@ -64,7 +64,7 @@ function updateToDoList()
   
  //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
-  const taskList = document.getElementById("single-to-do-list);
+  const taskList = document.getElementById("single-to-do-list");
   if (item.status == "Not Done")
   {
      toDoCount++;
