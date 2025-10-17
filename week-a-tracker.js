@@ -77,12 +77,12 @@ function updateToDoList()
         item.status = "Done";
      }
   }
+  
+ });
   const countText = document.createElement("p");
   countText.textContent = "Number of Tasks to do "+toDoCount;
   aToDoList.appendChild(countText);
   
- });
-
  
  
 }
