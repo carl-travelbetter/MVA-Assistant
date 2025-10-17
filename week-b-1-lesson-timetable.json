@@ -7,7 +7,7 @@
   {"subject":"Geography", "day":10, "timeslot":1},
   {"subject":"Classical Civilisation", "day":6, "timeslot":1},
   {"subject":"Global Citizenship", "day":5, "timeslot":1},
-  {"subject":"English Lit","day":10, "timeslot":1};
+  {"subject":"English Lit","day":10, "timeslot":1},
   {"subject":"Wellbeing", "day":10, "timeslot":1},
   {"subject":"Personal Development", "day":8, "timeslot":1}
 ]
