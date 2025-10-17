@@ -60,20 +60,20 @@ function updateToDoList()
   const aToDoList = document.getElementById("a-single-to-do");
   let filteredResults = [];
   //filter the list by those items not done
-  filteresResults = state.position.filter(item => item.status === "Not Done");
-  if (filteredResults.length > 0)
-  {
-    filteredResults.forEach (item => {
-     console.log("Result "+item.subject+" "+item.task);
-    });
-  }
-  else
-  { console.log("No Tasks for the To Do List"); }
-
   //Temporay Review of state results
  state.position.forEach(item => {
-  console.log("Subject "+item.subject+ " Task "+item.task+" Status "+item.status);
+  
+  if (item.status == "Not Done")
+  {
+     console.log("Adding to the to-do pile");
+     const to_do_task = document.createElement("p");
+     to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     aToDoList.appendChild(to_do_task);
+  }
+  
  });
+
+ 
  
 }
 
