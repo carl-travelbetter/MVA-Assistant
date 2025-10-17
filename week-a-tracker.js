@@ -79,7 +79,14 @@ function nextSLPriority()
 //Update the done list when an item is marked as done - with an option to move to to do if requireed
 function updateDoneList()
 {
-
+  /Grab the state, find all elements that are not done and add to the list
+  const aToDoList = document.getElementById("a-single-to-do");
+  let filteredResults = [];
+  //filter the list by those items not done
+  filteresResults = state.filter(position => position.status == "Done");
+  filteredResults.forEach (result => {
+   console.log("Result "+result.subject+" "+result.task);
+  });
 }
 
 //Reset the week
