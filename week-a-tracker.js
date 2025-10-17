@@ -60,22 +60,26 @@ function updateToDoList()
   console.log("Update To Do List");
   //Grab the state, find all elements that are not done and add to the list
   const aToDoList = document.getElementById("a-single-to-do");
-  
+  let toDoCount = 0;
   
  //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
   
   if (item.status == "Not Done")
   {
+     toDoCount++;
      console.log("Adding to the to-do pile");
-     const to_do_task = document.createElement("p");
-     to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
-     aToDoList.appendChild(to_do_task);
-     if (item.subject == "Biology")
+     //const to_do_task = document.createElement("p");
+     //to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     //aToDoList.appendChild(to_do_task);
+     if (item.subject == "Chemistry")
      {
         item.status = "Done";
      }
   }
+  const countText = document.createElement("p");
+  countText.textContent = "Number of Tasks to do "+toDoCount;
+  aToDoList.appendChild(countText);
   
  });
 
