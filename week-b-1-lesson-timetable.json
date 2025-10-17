@@ -1,0 +1,12 @@
+[
+  {"subject":"Biology", "day":5, "timeslot":1},
+  {"subject":"Chemistry", "day":5, "timeslot":1},
+  {"subject":"Physics", "day":5, "timeslot":1},
+  {"subject":"French", "day":5, "timeslot":1},
+  {"subject":"History", "day":5, "timeslot":1},
+  {"subject":"Geography", "day":5, "timeslot":1},
+  {"subject":"Classical Civilisation", "day":5, "timeslot":1},
+  {"subject":"Global Citizenship", "day":5, "timeslot":1},
+  {"subject":"Wellbeing", "day":5, "timeslot":1},
+  {"subject":"Personal Development", "day":5, "timeslot":1}
+]
