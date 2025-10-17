@@ -9,8 +9,8 @@ let slTimetable = [];
   })
   .catch(error => console.error("Error loading timetable", error));
 
-const TAGS = {
-  subjects: ["English Lang", "English Lit", "Maths", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
+const SLTAGS = {
+  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
   tasks: ["P&S", "Develop", "Submit", "Build"]
 };
 
@@ -32,8 +32,8 @@ function setSLStartPosition()
 {
   console.log("Start Position");
  //run through each week, subject, task and create new position object with start status set to not done. 
-    TAGS.subjects.forEach(subject => {
-      TAGS.tasks.forEach(task => {
+    SLTAGS.subjects.forEach(subject => {
+      SLTAGS.tasks.forEach(task => {
         //create new position object and add to start
         const positionItem = {subject:subject, task:task, status:"Not Done"};
         state.position.push(positionItem);
