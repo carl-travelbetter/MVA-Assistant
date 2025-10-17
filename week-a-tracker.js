@@ -20,6 +20,7 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 if (state.position.length > 0)
 {
   //Do something as we already have data
+ updateToDoList();
 }
 else
 {
