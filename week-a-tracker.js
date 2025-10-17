@@ -89,6 +89,8 @@ function updateToDoList()
 
 function showHideSLToDoList()
 {
+  console.log("Show/Hide SL To Do List");
+ 
   const taskList = document.getElementById("single-to-do-list");
   if (taskList.hidden)
   {
