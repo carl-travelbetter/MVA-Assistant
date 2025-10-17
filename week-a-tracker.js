@@ -71,7 +71,7 @@ function updateToDoList()
      console.log("Adding to the to-do pile");
      const to_do_task = document.createElement("p");
      to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
-     taskLst.appendChild(to_do_task);
+     taskList.appendChild(to_do_task);
      if (item.subject == "Chemistry")
      {
         item.status = "Done";
