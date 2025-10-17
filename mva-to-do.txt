@@ -1,2 +1,4 @@
 Design the task due logic
 Output the tasks due per day
+Output the done and not done tasks for week A
+Decide whether to do P&S tasks
