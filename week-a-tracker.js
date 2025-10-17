@@ -9,7 +9,46 @@ let slTimetable = [];
   })
   .catch(error => console.error("Error loading timetable", error));
 
+const TAGS = {
+  subjects: ["English Lang", "English Lit", "Maths", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
+  tasks: ["P&S", "Develop", "Submit", "Build"]
+};
+
+const STORAGE_KEY = "mva_a_sl_tracker";
+
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+if (state.position.length > 0)
+{
+  //Do something as we already have data
+}
+else
+{
+  setSLStartPosition();
+}
+
 //load state data
+
+function setSLStartPosition()
+{
+  console.log("Start Position");
+ //run through each week, subject, task and create new position object with start status set to not done. 
+    TAGS.subjects.forEach(subject => {
+      TAGS.tasks.forEach(task => {
+        //create new position object and add to start
+        const positionItem = {subject:subject, task:task, status:"Not Done"};
+        state.position.push(positionItem);
+      } );
+    });
+ 
+  saveState();
+}
+
+//Save status back to local memory
+function saveState() {
+  console.log("Saving Task Status...");
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
 function updateToDoList()
