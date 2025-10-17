@@ -64,14 +64,14 @@ function updateToDoList()
   
  //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
-  
+  const taskList = document.getElementById("single-to-do-list);
   if (item.status == "Not Done")
   {
      toDoCount++;
      console.log("Adding to the to-do pile");
-     //const to_do_task = document.createElement("p");
-     //to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
-     //aToDoList.appendChild(to_do_task);
+     const to_do_task = document.createElement("p");
+     to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     taskLst.appendChild(to_do_task);
      if (item.subject == "Chemistry")
      {
         item.status = "Done";
@@ -85,6 +85,19 @@ function updateToDoList()
   
  
  
+}
+
+function showHideSLToDoList()
+{
+  const taskList = document.getElementById("single-to-do-list");
+  if (taskList.hidden)
+  {
+    taskList.hidden = false;
+  }
+  else
+  {
+   taskList.hidden = true;
+  }
 }
 
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
