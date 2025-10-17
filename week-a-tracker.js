@@ -58,9 +58,9 @@ function updateToDoList()
   const aToDoList = document.getElementById("a-single-to-do");
   let filteredResults = [];
   //filter the list by those items not done
-  filteresResults = state.filter(position => position.status == "Not Done");
-  filteredResults.forEach (result => {
-   console.log("Result "+result.subject+" "+result.task);
+  filteresResults = state.position.filter(item => item.status == "Not Done");
+  filteredResults.forEach (item => {
+   console.log("Result "+item.subject+" "+item.task);
   });
 }
 
