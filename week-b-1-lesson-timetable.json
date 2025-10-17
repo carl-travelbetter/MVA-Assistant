@@ -1,12 +1,12 @@
 [
-  {"subject":"Biology", "day":5, "timeslot":1},
-  {"subject":"Chemistry", "day":5, "timeslot":1},
-  {"subject":"Physics", "day":5, "timeslot":1},
-  {"subject":"French", "day":5, "timeslot":1},
-  {"subject":"History", "day":5, "timeslot":1},
-  {"subject":"Geography", "day":5, "timeslot":1},
-  {"subject":"Classical Civilisation", "day":5, "timeslot":1},
+  {"subject":"Biology", "day":6, "timeslot":1},
+  {"subject":"Chemistry", "day":8, "timeslot":1},
+  {"subject":"Physics", "day":8, "timeslot":1},
+  {"subject":"French", "day":9, "timeslot":1},
+  {"subject":"History", "day":8, "timeslot":1},
+  {"subject":"Geography", "day":10, "timeslot":1},
+  {"subject":"Classical Civilisation", "day":6, "timeslot":1},
   {"subject":"Global Citizenship", "day":5, "timeslot":1},
-  {"subject":"Wellbeing", "day":5, "timeslot":1},
-  {"subject":"Personal Development", "day":5, "timeslot":1}
+  {"subject":"Wellbeing", "day":10, "timeslot":1},
+  {"subject":"Personal Development", "day":8, "timeslot":1}
 ]
