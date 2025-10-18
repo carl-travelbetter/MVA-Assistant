@@ -102,6 +102,21 @@ function showHideSLToDoList()
   }
 }
 
+function showHideSLDoneList()
+{
+  console.log("Show/Hide SL Done List");
+ 
+  const taskList = document.getElementById("single-done-list");
+  if (taskList.hidden)
+  {
+    taskList.hidden = false;
+  }
+  else
+  {
+   taskList.hidden = true;
+  }
+}
+
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
 function nextDLPriority()
 {
