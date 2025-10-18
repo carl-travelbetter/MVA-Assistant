@@ -76,6 +76,16 @@ function updateToDoList()
      {
         item.status = "Done";
      }
+     if (item.subject == "Biology")
+     {
+        if (item.task == "P&S")
+        {
+          const doNext = document.getElementById("sltask");
+          const sltask = document.createElement("p");
+          sltask.textContent = item.subject+item.task;
+          doNext.appendChild(sltask);
+        }
+     }
   }
   
  });
