@@ -82,7 +82,7 @@ function updateToDoList()
         {
           const doNext = document.getElementById("sltask");
           const sltask = document.createElement("p");
-          sltask.textContent = item.subject+item.task;
+          sltask.textContent = ""+item.subject+item.task;
           doNext.appendChild(sltask);
         }
      }
