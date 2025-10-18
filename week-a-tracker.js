@@ -80,10 +80,10 @@ function updateToDoList()
      {
         if (item.task == "P&S")
         {
-          const doNext = document.getElementById("sltask");
+          const doNextContainer = document.getElementById("sltask");
           const sltask = document.createElement("p");
-          sltask.textContent = ""+item.subject+item.task;
-          doNext.appendChild(sltask);
+          sltask.textContent = "Word";
+          doNextContainer.appendChild(sltask);
         }
      }
   }
