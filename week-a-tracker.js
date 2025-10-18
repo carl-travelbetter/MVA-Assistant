@@ -133,7 +133,7 @@ function nextSLPriority()
 function updateDoneList()
 {
   //Grab the state, find all elements that are done and add to the list
-  const aDoneList = document.getElementById("a-single-done");
+  const aDoneList = document.getElementById("single-done-list");
   //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
   
