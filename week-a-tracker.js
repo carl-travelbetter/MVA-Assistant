@@ -79,9 +79,12 @@ function updateToDoList()
   }
   
  });
+
+  //Take the to do count and add to the output
+  const countDiv = document.getElementById("sltd-count");
   const countText = document.createElement("p");
   countText.textContent = "Number of Tasks to do "+toDoCount;
-  aToDoList.appendChild(countText);
+  countDiv.appendChild(countText);
   
  
  
