@@ -151,7 +151,7 @@ function nextSLPriority()
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
    const output = document.getElementById("sltask");
-   
+   output.innerHTML = "";
    slTimetable.forEach (item => 
     {
       console.log(item.subject+item.priority);
@@ -160,6 +160,10 @@ function nextSLPriority()
         const subject = document.createElement("p");
         subject.textContent = item.subject;
         output.appendChild(subject);
+        const doneButton = document.createElement("button");
+        doneButton.className = "control-btn";
+        doneButton.textContent = "Done";
+        output.appendChild(doneButton);
         return;
       }
     });
