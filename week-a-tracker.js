@@ -115,6 +115,7 @@ function showHideSLToDoList()
    taskList.hidden = true;
   }
 
+  //Temporary call to test functionality
   increasePriority();
 }
 
@@ -131,6 +132,9 @@ function showHideSLDoneList()
   {
    taskList.hidden = true;
   }
+
+  //Temporary call to test functionality
+  nextSLPriority();
 }
 
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
@@ -142,7 +146,19 @@ function nextDLPriority()
 //Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
 function nextSLPriority()
 {
- 
+   //Grab the output value - search through the timetable to find a match with the current priority
+   //She that value for now
+   const output = document.getElementById("sltask");
+   slTimetable.forEach (item => 
+    {
+      if (item.priority == priority)
+      {
+        const subject = document.createElement("p");
+        subject.textContent = item.subject;
+        output.appendChild(subject);
+        return;
+      }
+    }
 } 
 
 //Update the done list when an item is marked as done - with an option to move to to do if requireed
