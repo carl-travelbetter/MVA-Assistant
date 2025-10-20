@@ -6,6 +6,7 @@ let slTimetable = [];
   .then(data => {
     timetable = data;
     console.log("SL WEEK Time Table Loaded:", slTimetable);
+    console.log("SL Time Table = "+slTimetable.length);
   })
   .catch(error => console.error("Error loading timetable", error));
 
@@ -150,6 +151,7 @@ function nextSLPriority()
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
    const output = document.getElementById("sltask");
+   
    slTimetable.forEach (item => 
     {
       console.log(item.subject+item.priority);
