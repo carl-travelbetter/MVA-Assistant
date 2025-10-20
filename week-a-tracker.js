@@ -146,12 +146,14 @@ function nextDLPriority()
 //Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
 function nextSLPriority()
 {
+   console.log("Next SL Priority");
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
    const output = document.getElementById("sltask");
    slTimetable.forEach (item => 
     {
-      if (item.priority == priority)
+      console.log(item.subject+item.priority);
+      if (item.priority === priority)
       {
         const subject = document.createElement("p");
         subject.textContent = item.subject;
