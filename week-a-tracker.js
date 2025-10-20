@@ -19,8 +19,9 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
 const PRIORITY_KEY = "mva_priority";
 let currentP = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
-console.log("Current Priority = "+currentPriority.value);
+
 let priority = Number(currentP);
+console.log("Current Priority = "+priority);
 
 if (state.position.length > 0)
 {
