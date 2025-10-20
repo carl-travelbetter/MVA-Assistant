@@ -20,7 +20,7 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 const PRIORITY_KEY = "mva_priority";
 let currentP = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
 
-let priority = Number(currentP);
+let priority = Number(currentP.value);
 console.log("Current Priority = "+priority);
 
 if (state.position.length > 0)
@@ -65,7 +65,7 @@ function increasePriority()
   priority++;
   console.log("New Priority "+priority);
   currentP.value = ""+priority
-  localStorage.setItem(PRIORITY_KEY, JSON.stringify(currentPriority));
+  localStorage.setItem(PRIORITY_KEY, JSON.stringify(currentP));
 }
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
