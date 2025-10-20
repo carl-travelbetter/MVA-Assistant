@@ -4,7 +4,7 @@ let slTimetable = [];
  fetch('week-a-1-lesson-timetable.json')
   .then(response => response.json())
   .then(data => {
-    timetable = data;
+    slTimetable = data;
     console.log("SL WEEK Time Table Loaded:", slTimetable);
     console.log("SL Time Table = "+slTimetable.length);
   })
