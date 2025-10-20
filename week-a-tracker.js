@@ -65,7 +65,7 @@ function increasePriority()
   console.log("Updating Priority");
   priority++;
   console.log("New Priority "+priority);
-  currentP.value = ""+priority
+  currentP.value = priority.toString;
   localStorage.setItem(PRIORITY_KEY, JSON.stringify(currentP));
 }
 
