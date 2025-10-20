@@ -18,9 +18,9 @@ const STORAGE_KEY = "mva_a_sl_tracker";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
 const PRIORITY_KEY = "mva_priority";
-let currentPriority = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
+let currentP = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
 console.log("Current Priority = "+currentPriority.value);
-
+let priority = Number(currentP);
 
 if (state.position.length > 0)
 {
@@ -61,9 +61,10 @@ function saveState() {
 function increasePriority() 
 {
   console.log("Updating Priority");
- // currentPriority++;
- // console.log("New Priority "+currentPriority);
- // localStorage.setItem(PRIORITY_KEY, currentPriority);
+  priority++;
+  console.log("New Priority "+priority);
+  currentP.value = ""+priority
+  localStorage.setItem(PRIORITY_KEY, JSON.stringify(currentPriority));
 }
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
@@ -112,6 +113,8 @@ function showHideSLToDoList()
   {
    taskList.hidden = true;
   }
+
+  increasePriority();
 }
 
 function showHideSLDoneList()
