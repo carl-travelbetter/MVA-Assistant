@@ -158,7 +158,7 @@ function nextSLPriority()
         output.appendChild(subject);
         return;
       }
-    }
+    });
 } 
 
 //Update the done list when an item is marked as done - with an option to move to to do if requireed
