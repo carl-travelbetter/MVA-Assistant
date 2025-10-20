@@ -15,8 +15,13 @@ const SLTAGS = {
 };
 
 const STORAGE_KEY = "mva_a_sl_tracker";
-
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+
+const PRIORITY_KEY = "mva_priority";
+let currentPriority = localStorage.getItem(PRIORITY_KEY) || {1};
+console.log("Current Priority = "+currentPriority);
+
+
 if (state.position.length > 0)
 {
   //Do something as we already have data
@@ -53,6 +58,13 @@ function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+function increasePriority() 
+{
+  console.log("Updating Priority");
+  currentPriority++;
+  console.log("New Priority "+currentPriority);
+  localStorage.setItem(PRIORITY_KEY, currentPriority);
+}
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
 function updateToDoList()
@@ -72,20 +84,7 @@ function updateToDoList()
      const to_do_task = document.createElement("p");
      to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
      taskList.appendChild(to_do_task);
-     if (item.subject == "Chemistry")
-     {
-        item.status = "Done";
-     }
-     if (item.subject == "Biology")
-     {
-        if (item.task == "P&S")
-        {
-          const doNextContainer = document.getElementById("sltask");
-          const sltask = document.createElement("p");
-          sltask.textContent = item.subject+" "+item.task;
-          doNextContainer.appendChild(sltask);
-        }
-     }
+     
   }
   
  });
@@ -133,7 +132,7 @@ function showHideSLDoneList()
 //work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
 function nextDLPriority()
 {
-
+   
 }
 
 //Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
