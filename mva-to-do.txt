@@ -1,4 +1,4 @@
-Design the task due logic
-Output the tasks due per day
-Output the done and not done tasks for week A
-Decide whether to do P&S tasks
+Fix the Priority NaN problem
+Tidy up the UI
+Central - Reset, hide everything but the reset div and success message
+Check the count on priority and why it isn't completing wellbeing.
