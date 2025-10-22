@@ -1,49 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Week A Single Lesson Tracker</title>
+    <title>MVA Assistant</title>
     <link rel="stylesheet" href="mva-assistant.css">
-    <script src="week-a-tracker.js" defer></script> 
+    <script src="mva-assistant.js" defer></script>
   </head>
   <body>
     <section id="intro">
-      <div>
-      <h1>Week A Single Lesson Tracker</h1>
-        <p>Review and Tick Off Week A Single Lesson Tasks</p>
-        <P><i>Remainder - All Week A Tasks must be complete before Week B starts</i></P>
+      <h1>MVA Assistant</h1>
+      <p>Welcome to your MVA Assistant - your online support to reaching your full potential</p>
+    </section>
+    <section id="menu-section">
+      <div id="menu" class="card">
+        <div class="card-list">
+        <ul>
+          <li><a href="view-timetable.html">View Timetable</a></li>
+          <li><a href="week-a-sl.html">Week A Single Lessons</a></li>
+          <li><a href="week-a-dl.html">Week A Double Lessons</a></li>
+          <li><a href="index.html">Return to Start Menu</a></li>
+        </ul>
+        </div>
       </div>
     </section>
-    <section id="filters">
-      <div id="control-bar" class="card">
-      </div>
-    </section>
-    <section id="single-lessons">
-    <div id="single-lesson-tracker" class="tracking-card">
-      <h2>Single Lessons</h2>
-       <div id="a-single-next">
-        <h3>Do This</h3>
-         <h4>Prep</h4> 
-         <div id="sltaskprep"></div>
-         <h4>Build</h4>
-         <div id="sltaskbuild"></div>
-         <h4>Develop</h4>
-         <div id="sltaskdevelop"></div>
-      </div>
-      <div id="a-single-to-do" class="tracking-card">
-        <h3>To Do</h3>
-        <div id="sltd-count"></div>
-        <div><button class="control-btn" onclick="showHideSLToDoList()">Hide/View To Do List</button></div>
-        <div id="single-to-do-list"  hidden></div>
-      </div>
-      <div id="a-single-done" class="tracking-card">
-        <h3>Done</h3>
-        <div><button class="control-btn" onclick="showHideSLDoneList()">Hide/View Done List</button></div>
-        <div id="single-done-list"  hidden></div>
-      </div>
-    </div>
-  </section>
-    <section id="nav">
-      <a href="index.html">Start Menu</a>
-    </section>
+    
   </body>
 </html>
