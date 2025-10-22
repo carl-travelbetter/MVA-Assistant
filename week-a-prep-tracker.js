@@ -11,7 +11,7 @@ let slTimetable = [];
   .catch(error => console.error("Error loading timetable", error));
 
 const SLTAGS = {
-  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography", "Wellbeing"]
+  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"]
 };
 
 const STORAGE_KEY = "mva_a_sl_tracker";
@@ -62,7 +62,7 @@ function increasePriority()
 {
   console.log("Updating Priority");
   priority++;
-  if (priority > 10)
+  if (priority > 9)
   {
     alert("All Prep Tasks Done - Well Done Georgie");
     document.getElementById("reset").hidden = false;
