@@ -140,7 +140,7 @@ function showHideSLDoneList()
 //Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
 function getNextTask()
 {
-   console.log("Next SL Priority");
+   console.log("***Get Next Task***");
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
    const output = document.getElementById("task");
@@ -160,7 +160,7 @@ function getNextTask()
           setTaskToDone();    
         });
         output.appendChild(doneButton);
-        output.hidden = false;
+        document.getElementById("next").hidden = false;
         document.getElementById("getNext").hidden = true;
         return;
       }
