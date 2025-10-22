@@ -216,5 +216,5 @@ function resetWeek()
    document.getElementById("reset").hidden = true;
    updateToDoList();
    updateDoneList();
-   document.getElementById("getNext").hidden = true;
+   document.getElementById("getNext").hidden = false;
 }
