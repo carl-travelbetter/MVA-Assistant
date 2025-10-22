@@ -62,7 +62,7 @@ function increasePriority()
   priority++;
   console.log("New Priority "+priority);
   savedPriority.value = priority.toString();
-  localStorage.setItem(PRIORITY_KEY, JSON.stringify(savedPriority));
+  localStorage.setItem(A_SLPREP_PRIORITY_KEY, JSON.stringify(savedPriority));
 }
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
