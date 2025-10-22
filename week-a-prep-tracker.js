@@ -171,7 +171,7 @@ function getNextTask()
 function setTaskToDone(subject)
 {
   console.log("Clicked Done");
-  state.forEach(item => {
+  state.position.forEach(item => {
     if (item.subject == subject)
     {
       item.status = "Done";
