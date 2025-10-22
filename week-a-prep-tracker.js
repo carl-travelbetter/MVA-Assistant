@@ -11,7 +11,7 @@ let slTimetable = [];
   .catch(error => console.error("Error loading timetable", error));
 
 const SLTAGS = {
-  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"]
+  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography", "Wellbeing"]
 };
 
 const STORAGE_KEY = "mva_a_sl_tracker";
@@ -61,13 +61,14 @@ function increasePriority()
 {
   console.log("Updating Priority");
   priority++;
-  if (priority > 9)
+  if (priority > 10)
   {
     alert("All Prep Tasks Done - Well Done Georgie");
+    document.getElementById("reset").hidden = false;
     return;
   }
   console.log("New Priority "+priority);
-  savedPriority.value = priority.toString();
+  //savedPriority.value = priority.toString();
   localStorage.setItem(A_SLPREP_PRIORITY_KEY, JSON.stringify(priority));
 }
 
@@ -204,7 +205,12 @@ function updateDoneList()
 }
 
 //Reset the week
-function resetWeekA()
+function resetWeek()
 {
- 
+   console.log("Reset Week");
+   priority = 1;
+   localStorage.setItem(A_SLPREP_PRIORITY_KEY, JSON.stringify(priority));
+   state.position = [];
+   setSLStartPosition();
+   document.getElementById("reset").hidden = true;
 }
