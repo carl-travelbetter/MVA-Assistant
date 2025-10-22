@@ -19,8 +19,8 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
 const A_SLPREP_PRIORITY_KEY = "a_slprep_priority";
 let savedPriority = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {value: "1"};
-console.log("Saved Priority = "+savedPriority);
-let priority = Number(savedPriority);
+console.log("Saved Priority = "+savedPriority.value);
+let priority = Number(savedPriority.value);
 
 console.log("Current Priority = "+priority);
 
