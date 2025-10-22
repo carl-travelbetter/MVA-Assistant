@@ -91,7 +91,7 @@ function updateToDoList()
   //Take the to do count and add to the output
   const countDiv = document.getElementById("count");
   const countText = document.createElement("p");
-  countText.textContent = "Number of Tasks to do "+toDoCount;
+  countText.textContent = "Number of Prep Tasks left to do "+toDoCount;
   countDiv.appendChild(countText);  
  
 }
