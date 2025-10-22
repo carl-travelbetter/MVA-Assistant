@@ -27,12 +27,14 @@ if (state.position.length > 0)
   //Do something as we already have data
  updateToDoList();
  updateDoneList();
+ getNextTask();
 }
 else
 {
   setSLStartPosition();
   updateToDoList();
   updateDoneList();
+  getNextTask();
 }
 
 //load state data
@@ -128,18 +130,13 @@ function showHideSLDoneList()
    taskList.hidden = true;
   }
 
-  //Temporary call to test functionality
-  nextSLPriority();
+ 
 }
 
-//work out and show the next DL prioirty task - this should control what comes off the to do list and moves to done
-function nextDLPriority()
-{
-   
-}
+
 
 //Work out and show the next priority task 0 this should control what comms off the to do list and moves to done
-function nextSLPriority()
+function getNextTask()
 {
    console.log("Next SL Priority");
    //Grab the output value - search through the timetable to find a match with the current priority
@@ -157,11 +154,19 @@ function nextSLPriority()
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
         doneButton.textContent = "Done";
+        doneButton.addEventListener("click", () => {
+          setTaskToDone();    
+        });
         output.appendChild(doneButton);
         return;
       }
     });
-} 
+}
+
+function setTaskToDone()
+{
+  console.log("Clicked Done");
+}
 
 //Update the done list when an item is marked as done - with an option to move to to do if requireed
 function updateDoneList()
