@@ -89,7 +89,7 @@ function updateToDoList()
  });
 
   //Take the to do count and add to the output
-  const countDiv = document.getElementById("sltd-count");
+  const countDiv = document.getElementById("count");
   const countText = document.createElement("p");
   countText.textContent = "Number of Tasks to do "+toDoCount;
   countDiv.appendChild(countText);  
@@ -100,7 +100,7 @@ function showHideSLToDoList()
 {
   console.log("Show/Hide SL To Do List");
  
-  const taskList = document.getElementById("single-to-do-list");
+  const taskList = document.getElementById("to-do-list");
   if (taskList.hidden)
   {
     taskList.hidden = false;
@@ -118,7 +118,7 @@ function showHideSLDoneList()
 {
   console.log("Show/Hide SL Done List");
  
-  const taskList = document.getElementById("single-done-list");
+  const taskList = document.getElementById("done-list");
   if (taskList.hidden)
   {
     taskList.hidden = false;
@@ -144,7 +144,7 @@ function nextSLPriority()
    console.log("Next SL Priority");
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
-   const output = document.getElementById("sltaskprep");
+   const output = document.getElementById("task");
    output.innerHTML = "";
    slTimetable.forEach (item => 
     {
@@ -167,7 +167,7 @@ function nextSLPriority()
 function updateDoneList()
 {
   //Grab the state, find all elements that are done and add to the list
-  const aDoneList = document.getElementById("single-done-list");
+  const aDoneList = document.getElementById("done-list");
   //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
   
@@ -175,7 +175,7 @@ function updateDoneList()
   {
      console.log("Adding to the to-do pile");
      const done_task = document.createElement("p");
-     done_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     done_task.textContent = "Subject "+item.subject+" Prep "+" Status "+item.status;
      aDoneList.appendChild(done_task);
   }
   
