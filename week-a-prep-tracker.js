@@ -82,6 +82,7 @@ function updateToDoList()
   const aToDoList = document.getElementById("to-do");
   let toDoCount = 0;
   const taskList = document.getElementById("to-do-list");
+  taskList.innerHTML = "";
  //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
  
@@ -189,6 +190,7 @@ function updateDoneList()
 {
   //Grab the state, find all elements that are done and add to the list
   const aDoneList = document.getElementById("done-list");
+  aDoneList.innerHTML = "";
   //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
   
