@@ -153,13 +153,13 @@ function getNextTask()
       if (item.priority === priority)
       {
         const subject = document.createElement("p");
-        subject.textContent = item.subject;
+        subject.textContent = item.subject+" Prep & Share Tasks";
         output.appendChild(subject);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
         doneButton.textContent = "Done";
         doneButton.addEventListener("click", () => {
-          setTaskToDone();    
+          setTaskToDone(item.subject);    
         });
         output.appendChild(doneButton);
         document.getElementById("next").hidden = false;
@@ -169,9 +169,18 @@ function getNextTask()
     });
 }
 
-function setTaskToDone()
+function setTaskToDone(subject)
 {
   console.log("Clicked Done");
+  state.forEach(item => {
+    if (item.subject == subject)
+    {
+      item.status = "Done";
+    }
+  });
+  updateToDoList();
+  updateDoneList();
+  saveState()
   increasePriority();
   getNextTask();
 }
