@@ -18,11 +18,10 @@ const SLTAGS = {
 const STORAGE_KEY = "mva_a_sl_tracker";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
-const PRIORITY_KEY = "mva_priority";
-let currentP = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
-
-let priority = Number(currentP.value);
-console.log("Current Priority = "+priority);
+const A_SLPREP_PRIORITY_KEY = "a_slprep_priority";
+let pPrep = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {value: "1"};
+let slprep_priority = Number(p1.value);
+console.log("Current Priority = "+slprep_priority);
 
 if (state.position.length > 0)
 {
@@ -63,10 +62,10 @@ function saveState() {
 function increasePriority() 
 {
   console.log("Updating Priority");
-  priority++;
+  slprep_priority++;
   console.log("New Priority "+priority);
-  currentP.value = priority.toString;
-  localStorage.setItem(PRIORITY_KEY, JSON.stringify(currentP));
+  pPrep.value = slprep_priority.toString();
+  localStorage.setItem(PRIORITY_KEY, JSON.stringify(pPrep));
 }
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
@@ -150,7 +149,7 @@ function nextSLPriority()
    console.log("Next SL Priority");
    //Grab the output value - search through the timetable to find a match with the current priority
    //She that value for now
-   const output = document.getElementById("sltask");
+   const output = document.getElementById("sltaskprep");
    output.innerHTML = "";
    slTimetable.forEach (item => 
     {
