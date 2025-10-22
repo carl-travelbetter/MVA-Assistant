@@ -20,10 +20,7 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 const A_SLPREP_PRIORITY_KEY = "a_slprep_priority";
 let savedPriority = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {value: "1"};
 let priority = Number(savedPriority.value);
-if (isNaN(priority))
-{
-  priority = 1;
-}
+
 console.log("Current Priority = "+priority);
 
 if (state.position.length > 0)
@@ -100,6 +97,7 @@ function updateToDoList()
 
   //Take the to do count and add to the output
   const countDiv = document.getElementById("count");
+  countDiv.innerHTML = "";
   const countText = document.createElement("p");
   countText.textContent = "Number of Prep Tasks left to do "+toDoCount;
   countDiv.appendChild(countText);  
