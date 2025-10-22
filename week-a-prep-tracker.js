@@ -113,9 +113,6 @@ function showHideSLToDoList()
   {
    taskList.hidden = true;
   }
-
-  //Temporary call to test functionality
-  increasePriority();
 }
 
 function showHideSLDoneList()
@@ -170,6 +167,8 @@ function getNextTask()
 function setTaskToDone()
 {
   console.log("Clicked Done");
+  increasePriority();
+  getNextTask();
 }
 
 //Update the done list when an item is marked as done - with an option to move to to do if requireed
