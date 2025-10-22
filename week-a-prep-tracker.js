@@ -18,7 +18,8 @@ const STORAGE_KEY = "mva_a_sl_tracker";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
 const A_SLPREP_PRIORITY_KEY = "a_slprep_priority";
-let savedPriority = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {"1"};
+let savedPriority = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {value: "1"};
+console.log("Saved Priority = "+savedPriority;
 let priority = Number(savedPriority);
 
 console.log("Current Priority = "+priority);
