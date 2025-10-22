@@ -214,4 +214,7 @@ function resetWeek()
    state.position = [];
    setSLStartPosition();
    document.getElementById("reset").hidden = true;
+   updateToDoList();
+   updateDoneList();
+   document.getElementById("getNext").hidden = true;
 }
