@@ -64,9 +64,14 @@ function increasePriority()
 {
   console.log("Updating Priority");
   priority++;
+  if (priority > 9)
+  {
+    alert("All Prep Tasks Done - Well Done Georgie");
+    return;
+  }
   console.log("New Priority "+priority);
   savedPriority.value = priority.toString();
-  localStorage.setItem(A_SLPREP_PRIORITY_KEY, JSON.stringify(savedPriority));
+  localStorage.setItem(A_SLPREP_PRIORITY_KEY, JSON.stringify(priority));
 }
 
 //Update the to do list when loading, when reset, or when an item is marked as not done
