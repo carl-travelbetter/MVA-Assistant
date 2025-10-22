@@ -149,7 +149,6 @@ function getNextTask()
    output.innerHTML = "";
    slTimetable.forEach (item => 
     {
-      console.log(item.subject+item.priority);
       if (item.priority === priority)
       {
         const subject = document.createElement("p");
