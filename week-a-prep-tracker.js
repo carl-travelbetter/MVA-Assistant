@@ -27,14 +27,12 @@ if (state.position.length > 0)
   //Do something as we already have data
  updateToDoList();
  updateDoneList();
- getNextTask();
 }
 else
 {
   setSLStartPosition();
   updateToDoList();
   updateDoneList();
-  getNextTask();
 }
 
 //load state data
@@ -158,6 +156,8 @@ function getNextTask()
           setTaskToDone();    
         });
         output.appendChild(doneButton);
+        output.hidden = false;
+        document.getElementById("getNext").hidden = true;
         return;
       }
     });
