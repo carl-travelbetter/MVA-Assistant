@@ -20,7 +20,7 @@ let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
 const A_SLPREP_PRIORITY_KEY = "a_slprep_priority";
 let pPrep = localStorage.getItem(A_SLPREP_PRIORITY_KEY) || {value: "1"};
-let slprep_priority = Number(p1.value);
+let slprep_priority = Number(pPrep.value);
 console.log("Current Priority = "+slprep_priority);
 
 if (state.position.length > 0)
