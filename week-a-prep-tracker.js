@@ -11,8 +11,7 @@ let slTimetable = [];
   .catch(error => console.error("Error loading timetable", error));
 
 const SLTAGS = {
-  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"],
-  tasks: ["P&S", "Build", "Develop"]
+  subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"]
 };
 
 const STORAGE_KEY = "mva_a_sl_tracker";
@@ -43,11 +42,9 @@ function setSLStartPosition()
   console.log("Start Position");
  //run through each week, subject, task and create new position object with start status set to not done. 
     SLTAGS.subjects.forEach(subject => {
-      SLTAGS.tasks.forEach(task => {
         //create new position object and add to start
-        const positionItem = {subject:subject, task:task, status:"Not Done"};
+        const positionItem = {subject:subject, status:"Not Done"};
         state.position.push(positionItem);
-      } );
     });
  
   saveState();
@@ -73,9 +70,9 @@ function updateToDoList()
 {
   console.log("Update To Do List");
   //Grab the state, find all elements that are not done and add to the list
-  const aToDoList = document.getElementById("a-single-to-do");
+  const aToDoList = document.getElementById("to-do");
   let toDoCount = 0;
-  const taskList = document.getElementById("single-to-do-list");
+  const taskList = document.getElementById("to-do-list");
  //Loop through and add the not done items to the to do list
  state.position.forEach(item => {
  
@@ -84,7 +81,7 @@ function updateToDoList()
      toDoCount++;
      console.log("Adding to the to-do pile");
      const to_do_task = document.createElement("p");
-     to_do_task.textContent = "Subject "+item.subject+" Task "+item.task+" Status "+item.status;
+     to_do_task.textContent = "Subject "+item.subject+" Prep "+" Status "+item.status;
      taskList.appendChild(to_do_task);
      
   }
@@ -95,9 +92,7 @@ function updateToDoList()
   const countDiv = document.getElementById("sltd-count");
   const countText = document.createElement("p");
   countText.textContent = "Number of Tasks to do "+toDoCount;
-  countDiv.appendChild(countText);
-  
- 
+  countDiv.appendChild(countText);  
  
 }
 
