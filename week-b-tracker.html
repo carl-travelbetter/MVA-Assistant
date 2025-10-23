@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Week B Tracker</title>
+    <title>MVA Assistant</title>
     <link rel="stylesheet" href="mva-assistant.css">
-    <script src="week-b-tracker.js" defer></script> 
+    <script src="mva-assistant.js" defer></script>
   </head>
-  <body>
+  <body><div class="mva-navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="view-timetable.html">View Timetable</a></li>
+    </ul>
+   </div>
     <section id="intro">
-      <div>
-      <h1>Week B Tracker</h1>
-        <p>Review and Tick Off Week B Tasks and Lessons</p>
-        <p>Reminder - all Week B tasks need to be completed before Week A Starts</p>
+      <div class="intro">
+      <h1>MVA Assistant</h1>
+      <p>Welcome to your MVA Assistant - your online support to reaching your full potential</p>
       </div>
     </section>
-    <section id="filters">
-      <div id="control-bar" class="card">
+    <section id="menu-section">
+      <div id="menu" class="card">
+        <div class="card-list">
+        <ul>
+          <li><a href="view-timetable.html">View Timetable</a></li>
+          <li><a href="week-b-sl.html">Week B Single Lessons</a></li>
+          <li><a href="week-b-dl.html">Week B Double Lessons</a></li>
+          <li><a href="index.html">Return to Start Menu</a></li>
+        </ul>
+        </div>
       </div>
     </section>
-    <section id="double-lessons">
-    <div id="double-lesson-tracker" class="card">
-      <div id="b-double-to-do">
-        <h2>To Do</h2>
-      </div>
-      <div id="b-double-done">
-        <h2>Done</h2>
-      </div>
-    </div>
-    </section>
-    <section id="single-lessons">
-    <div id="single-lesson-tracker" class="card">
-      <div id="b-single-to-do">
-        <h2>To Do</h2>
-      </div>
-      <div id="b-single-done">
-        <h2>Done</h2>
-      </div>
-    </div>
-  </section>
+    
   </body>
 </html>
