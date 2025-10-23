@@ -168,6 +168,9 @@ function getNextTask()
         const subject = document.createElement("p");
         subject.textContent = item.subject+" Prep & Share Tasks";
         output.appendChild(subject);
+        const dueDay = document.createElement("p");
+        dueDay.textContent = "Due "+item.day;
+        output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
         doneButton.textContent = "Done";
