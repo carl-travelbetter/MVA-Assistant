@@ -77,6 +77,7 @@ function increasePriority()
   if (priority > 10)
   {
     alert("All Prep Tasks Done - Well Done Georgie");
+    document.getElementById("single-lesson-tracker").hidden = true;
     document.getElementById("reset").hidden = false;
     return;
   }
@@ -228,5 +229,6 @@ function resetWeek()
    document.getElementById("reset").hidden = true;
    updateToDoList();
    updateDoneList();
+   document.getElementById("single-lesson-tracker").hidden = false;
    document.getElementById("getNext").hidden = false;
 }
