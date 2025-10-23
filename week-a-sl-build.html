@@ -20,14 +20,17 @@
     <section id="single-lessons">
       <div class="tracking-card" id="reset" hidden><button class="control-btn" onclick="resetWeek()">Reset Week</button></div>
     <div id="single-lesson-tracker" class="tracking-card">
-      <h2>Single Lessons Prep Tasks</h2>
-       <div id="next-build">
+      <h2>Single Lessons Build Tasks</h2>
+       <div id="getNext">
+         <button class="control-btn" onclick="getNextTask()">Get Next</button>
+       </div>
+       <div id="next" hidden>
         <h3>Do This</h3>
-         <div id="buildtask"></div>
+         <div id="task"></div>
       </div>
       <div id="to-do" class="tracking-card">
         <h3>To Do</h3>
-        <div id="sltd-count"></div>
+        <div id="count"></div>
         <div><button class="control-btn" onclick="showHideSLToDoList()">Hide/View To Do List</button></div>
         <div id="to-do-list"  hidden></div>
       </div>
