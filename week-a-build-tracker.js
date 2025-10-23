@@ -76,7 +76,7 @@ function increasePriority()
   priority++;
   if (priority > 10)
   {
-    alert("All Prep Tasks Done - Well Done Georgie");
+    alert("All Build Tasks Done - Well Done Georgie");
     document.getElementById("single-lesson-tracker").hidden = true;
     document.getElementById("reset").hidden = false;
     return;
