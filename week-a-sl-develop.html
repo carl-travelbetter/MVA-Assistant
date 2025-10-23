@@ -3,11 +3,15 @@
   <head>
     <title>Week A Single Lesson Develop Tracker</title>
     <link rel="stylesheet" href="mva-assistant.css">
-    <script src="week-a-prep-tracker.js" defer></script> 
+    <script src="week-a-develop-tracker.js" defer></script> 
   </head>
-  <body>
+  <body><div class="mva-navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+   </div>
     <section id="intro">
-      <div>
+      <div class="intro">
       <h1>Week A Single Lesson Develop Tracker</h1>
         <p>Review and Tick Off Week A Single Lesson Develop Tasks</p>
       </div>
@@ -15,13 +19,14 @@
     <section id="single-lessons">
     <div id="single-lesson-tracker" class="tracking-card">
       <h2>Single Lessons Prep Tasks</h2>
-       <div id="next-develop">
+       <div class="tracking-card" id="reset" hidden><button class="control-btn" onclick="resetWeek()">Reset Week</button></div>
+       <div id="next" hidden>
         <h3>Do This</h3>
-         <div id="develop-task"></div>
+         <div id="task"></div>
       </div>
       <div id="to-do" class="tracking-card">
         <h3>To Do</h3>
-        <div id="sltd-count"></div>
+        <div id="count"></div>
         <div><button class="control-btn" onclick="showHideSLToDoList()">Hide/View To Do List</button></div>
         <div id="to-do-list"  hidden></div>
       </div>
@@ -32,8 +37,5 @@
       </div>
     </div>
   </section>
-    <section id="nav">
-      <a href="index.html">Start Menu</a>
-    </section>
   </body>
 </html>
