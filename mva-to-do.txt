@@ -1,4 +1,9 @@
-Fix the Priority NaN problem
-Tidy up the UI
-Central - Reset, hide everything but the reset div and success message
-Check the count on priority and why it isn't completing wellbeing.
+Complete Single Lesson Week B
+Dashboard Design
+Dashboard Imp
+Camera Clock Prototype
+Double Lesson Flow
+Double Lesson HTML
+Double Lesson JS
+Double Lesson JSON
+
