@@ -7,5 +7,6 @@
   {"subject":"Geography", "day":5, "priority":8},
   {"subject":"Classical Civilisation", "day":2, "priority":3},
   {"subject":"Global Citizenship", "day":1, "priority":2},
-  {"subject":"English Lit","day":5, "priority":9}
+  {"subject":"English Lit","day":5, "priority":9},
+  {"subject":"Wellbeing","day":5, "priority":10}
 ]
