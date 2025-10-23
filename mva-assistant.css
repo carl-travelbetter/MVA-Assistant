@@ -61,6 +61,10 @@ tb-navbar ul li a:hover {
    text-align:center;
 }
 
+.into p {
+   font-size:1.25em;
+}
+
 .card {
     margin-left:auto;
     margin-right:auto;
