@@ -1,4 +1,4 @@
-console.log("Week A Build Tracker...");
+console.log("Week A Develop Tracker...");
 
 let slTimetable = [];
  fetch('week-a-1-lesson-timetable.json')
