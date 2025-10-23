@@ -103,7 +103,7 @@ function updateToDoList()
      toDoCount++;
      console.log("Adding to the to-do pile");
      const to_do_task = document.createElement("p");
-     to_do_task.textContent = "Subject "+item.subject+" Prep "+" Status "+item.status;
+     to_do_task.textContent = "Subject "+item.subject+" Build "+" Status "+item.status;
      taskList.appendChild(to_do_task);
      
   }
@@ -114,7 +114,7 @@ function updateToDoList()
   const countDiv = document.getElementById("count");
   countDiv.innerHTML = "";
   const countText = document.createElement("p");
-  countText.textContent = "Number of Prep Tasks left to do "+toDoCount;
+  countText.textContent = "Number of Build Tasks left to do "+toDoCount;
   countDiv.appendChild(countText);  
  
 }
