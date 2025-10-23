@@ -70,7 +70,7 @@ tb-navbar ul li a:hover {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     width: 80%vw;
-    max-width:600px;
+    max-width:800px;
     text-align:center;
     padding:10px;
 }
@@ -185,7 +185,7 @@ tb-navbar ul li a:hover {
   box-sizing: border-box;  
   text-align: left;
   width: 90%vw;
-  max-width:600px;
+  max-width:800px;
   padding:10px;
 }
 
