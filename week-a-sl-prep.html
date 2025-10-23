@@ -6,14 +6,19 @@
     <script src="week-a-prep-tracker.js" defer></script> 
   </head>
   <body>
+    <div class="mva-navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+   </div>
     <section id="intro">
-      <div>
+      <div class="intro">
       <h1>Week A Single Lesson Prep Tracker</h1>
         <p>Review and Tick Off Week A Single Lesson Prep Tasks</p>
       </div>
     </section>
     <section id="single-lessons">
-    <div id="reset" hidden><button class="control-btn" onclick="resetWeek()">Reset Week</button></div>
+    <div class="tracking-card" id="reset" hidden><button class="control-btn" onclick="resetWeek()">Reset Week</button></div>
     <div id="single-lesson-tracker" class="tracking-card">
       <h2>Single Lessons Prep Tasks</h2>
        <div id="getNext">
@@ -36,8 +41,5 @@
       </div>
     </div>
   </section>
-    <section id="nav">
-      <a href="index.html">Start Menu</a>
-    </section>
   </body>
 </html>
