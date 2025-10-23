@@ -14,10 +14,10 @@ const SLTAGS = {
   subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"]
 };
 
-const WEEK_A_DEVELOP_STORAGE_KEY = "mva_a_slbuild_tracker";
+const WEEK_A_DEVELOP_STORAGE_KEY = "mva_a_sldevelop_tracker";
 let state = JSON.parse(localStorage.getItem(WEEK_A_DEVELOP_STORAGE_KEY)) || {position: []};
 
-const A_SLDEVELOP_PRIORITY_KEY = "a_slbuild_priority";
+const A_SLDEVELOP_PRIORITY_KEY = "a_sldevelop_priority";
 let savedPriority = localStorage.getItem(A_SLDEVELOP_PRIORITY_KEY) || {value: "1"};
 let priority = 0;
 if (isNaN(savedPriority))
