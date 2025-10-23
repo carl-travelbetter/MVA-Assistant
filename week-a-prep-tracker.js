@@ -62,7 +62,7 @@ function increasePriority()
 {
   console.log("Updating Priority");
   priority++;
-  if (priority > 9)
+  if (priority > 10)
   {
     alert("All Prep Tasks Done - Well Done Georgie");
     document.getElementById("reset").hidden = false;
