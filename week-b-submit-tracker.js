@@ -17,7 +17,7 @@ const SLTAGS = {
 const WEEK_B_SUBMIT_STORAGE_KEY = "mva_b_slsubmit_tracker";
 let state = JSON.parse(localStorage.getItem(WEEK_B_SUBMIT_STORAGE_KEY)) || {position: []};
 
-const B_SLSUBMIT_PRIORITY_KEY = "a_slbuild_priority";
+const B_SLSUBMIT_PRIORITY_KEY = "b_slsubmit_priority";
 let savedPriority = localStorage.getItem(B_SLSUBMIT_PRIORITY_KEY) || {value: "1"};
 let priority = 0;
 if (isNaN(savedPriority))
