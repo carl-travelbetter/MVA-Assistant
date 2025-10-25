@@ -77,7 +77,7 @@ function increasePriority()
   if (priority > 2)
   {
     alert("All Double Prep Tasks Done - Well Done Georgie");
-    document.getElementById("single-lesson-tracker").hidden = true;
+    document.getElementById("double-lesson-tracker").hidden = true;
     document.getElementById("reset").hidden = false;
     return;
   }
