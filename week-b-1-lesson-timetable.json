@@ -1,13 +1,12 @@
 [
-  {"subject":"Biology", "day":6, "timeslot":1},
-  {"subject":"Chemistry", "day":8, "timeslot":1},
-  {"subject":"Physics", "day":8, "timeslot":1},
-  {"subject":"French", "day":9, "timeslot":1},
-  {"subject":"History", "day":8, "timeslot":1},
-  {"subject":"Geography", "day":10, "timeslot":1},
-  {"subject":"Classical Civilisation", "day":6, "timeslot":1},
-  {"subject":"Global Citizenship", "day":5, "timeslot":1},
-  {"subject":"English Lit","day":10, "timeslot":1},
-  {"subject":"Wellbeing", "day":10, "timeslot":1},
-  {"subject":"Personal Development", "day":8, "timeslot":1}
+  {"subject":"Biology", "day":6, "priority":1},
+  {"subject":"Chemistry", "day":8, "priority":6},
+  {"subject":"Physics", "day":8, "priority":4},
+  {"subject":"French", "day":9, "priority":7},
+  {"subject":"History", "day":8, "priority":5},
+  {"subject":"Geography", "day":10, "priority":8},
+  {"subject":"Classical Civilisation", "day":7, "priority":3},
+  {"subject":"Global Citizenship", "day":6, "priority":2},
+  {"subject":"English Lit","day":10, "priority":9},
+  {"subject":"Wellbeing","day":10, "priority":10}
 ]
