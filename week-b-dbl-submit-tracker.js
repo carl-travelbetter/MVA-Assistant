@@ -1,7 +1,7 @@
-console.log("Week A Dbl Submit Tracker...");
+console.log("Week B Dbl Submit Tracker...");
 
 let dblTimetable = [];
- fetch('week-a-dbl-submit-timetable.json')
+ fetch('week-b-dbl-submit-timetable.json')
   .then(response => response.json())
   .then(data => {
     dblTimetable = data;
@@ -14,10 +14,10 @@ const SLTAGS = {
   subjects: ["English Language", "Maths"]
 };
 
-const STORAGE_KEY = "mva_a_dbl_submit_tracker";
+const STORAGE_KEY = "mva_b_dbl_submit_tracker";
 let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
 
-const PRIORITY_KEY = "a_dbl_submit_priority";
+const PRIORITY_KEY = "b_dbl_submit_priority";
 let savedPriority = localStorage.getItem(PRIORITY_KEY) || {value: "1"};
 let priority = 0;
 if (isNaN(savedPriority))
