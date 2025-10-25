@@ -233,6 +233,6 @@ function resetWeek()
    updateToDoList();
    updateDoneList();
    document.getElementById("next").hidden = true;
-   document.getElementById("single-lesson-tracker").hidden = false;
+   document.getElementById("double-lesson-tracker").hidden = false;
    document.getElementById("getNext").hidden = false;
 }
