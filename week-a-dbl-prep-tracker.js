@@ -74,7 +74,7 @@ function increasePriority()
 {
   console.log("Updating Priority");
   priority++;
-  if (priority > 10)
+  if (priority > 2)
   {
     alert("All Double Prep Tasks Done - Well Done Georgie");
     document.getElementById("single-lesson-tracker").hidden = true;
