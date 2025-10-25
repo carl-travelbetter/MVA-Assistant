@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week A Double Lesson Prep Tracker</title>
+    <link rel="stylesheet" href="mva-assistant.css">
+    <script src="week-a-dbl-prep-tracker.js" defer></script> 
+  </head>
+  <body>
+    <div class="mva-navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="week-a-sl.html">SL WKA Tracker Menu</a></li>
+      <li><a href="view-timetable.html">View Timetable</a></li>
+    </ul>
+   </div>
+    <section id="intro">
+      <div class="intro">
+      <h1>Week A Double Lesson Prep Tracker</h1>
+        <p>Review and Tick Off Week A Double Lesson Prep Tasks</p>
+      </div>
+    </section>
+    <section id="dbl-lessons">
+    <div class="tracking-card" id="reset" hidden><button class="control-btn" onclick="resetWeek()">Reset Week</button></div>
+    <div id="single-lesson-tracker" class="tracking-card">
+      <h2>Double Lessons Prep Tasks</h2>
+       <div id="getNext">
+         <button class="control-btn" onclick="getNextTask()">Get Next</button>
+       </div>
+       <div id="next" hidden>
+        <h3>Do This</h3>
+         <div id="task"></div>
+      </div>
+      <div id="to-do" class="tracking-card">
+        <h3>To Do</h3>
+        <div id="count"></div>
+        <div><button class="control-btn" onclick="showHideSLToDoList()">Hide/View To Do List</button></div>
+        <div id="to-do-list"  hidden></div>
+      </div>
+      <div id="done" class="tracking-card">
+        <h3>Done</h3>
+        <div><button class="control-btn" onclick="showHideSLDoneList()">Hide/View Done List</button></div>
+        <div id="done-list"  hidden></div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
