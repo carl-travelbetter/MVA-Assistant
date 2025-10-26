@@ -7,7 +7,7 @@ let weekAPrepDone = 0;
 let weekAPrepToDo = 0;
 
 state.position.forEach(item => {
-  if (item.state === "Done")
+  if (item.status === "Done")
   {
     weekAPrepDone++;
   }
