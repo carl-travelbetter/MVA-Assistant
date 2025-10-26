@@ -2,8 +2,6 @@
 Dashboard Design
 Dashboard Imp
 Camera Clock Prototype
-Double Lesson Flow
-Double Lesson HTML
-Double Lesson JS
-Double Lesson JSON
+Day look up
+Adjust for weekends
 
