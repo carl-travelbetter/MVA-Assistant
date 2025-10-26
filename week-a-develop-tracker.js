@@ -235,11 +235,10 @@ function updateDoneList()
 
 function lookupDay(number)
 {
-   console.log("Look up day "+number);
+  
    let response = "Day Not Found";
    daysLookup.forEach(item => {
-    console.log("Look Up Day "+item.day);
-    console.log("Look Up Label "+item.label);
+  
     if (item.day == number)
     {
       console.log("Match Found");
