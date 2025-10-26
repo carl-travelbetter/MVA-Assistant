@@ -10,6 +10,16 @@ let dblTimetable = [];
   })
   .catch(error => console.error("Error loading timetable", error));
 
+let daysLookup = [];
+ fetch('day-lookup.json')
+  .then(response => response.json())
+  .then(data => {
+    daysLookup = data;
+    console.log("Days Look Up Loaded", daysLookup);
+    console.log("Days Look Up "+daysLookup.length);
+  })
+  .catch(error => console.error("Error loading days lookup", error));
+
 const SLTAGS = {
   subjects: ["English Language", "Maths"]
 };
@@ -169,7 +179,8 @@ function getNextTask()
         subject.textContent = item.subject+" Build Tasks";
         output.appendChild(subject);
         const dueDay = document.createElement("p");
-        dueDay.textContent = "Due by day "+item.day;
+        let dayLabel = lookupDay(item.day+1);
+        dueDay.textContent = "Due by "+dayLabel;
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
@@ -219,6 +230,21 @@ function updateDoneList()
   }
   
  });
+}
+
+function lookupDay(number)
+{
+   let response = "Day Not Found";
+   daysLookup.forEach(item => {
+    if (item.day == number)
+    {
+      console.log("Match Found");
+      response = item.label;
+    }
+   
+   });
+   
+   return response;
 }
 
 //Reset the week
