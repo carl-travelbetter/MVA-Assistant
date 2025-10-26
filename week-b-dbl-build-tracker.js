@@ -179,7 +179,7 @@ function getNextTask()
         subject.textContent = item.subject+" Build Tasks";
         output.appendChild(subject);
         const dueDay = document.createElement("p");
-        dueDay.textContent = "Due by day "+lookupDay(item.day+1);
+        dueDay.textContent = "Due by "+lookupDay(item.day);
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
