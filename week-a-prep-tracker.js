@@ -179,9 +179,9 @@ function getNextTask()
         subject.textContent = item.subject+" Prep & Share Tasks";
         output.appendChild(subject);
         //lookup day - pass the item day and return a string
-        let day = lookupDay(item.day);
+        let dayLabel = lookupDay(item.day);
         const dueDay = document.createElement("p");
-        dueDay.textContent = "Due by "+day;
+        dueDay.textContent = "Due by "+dayLabel;
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
@@ -239,7 +239,7 @@ function lookupDay(number)
    daysLookup.forEach(item => {
     console.log("Look Up Day "+item.day);
     console.log("Look Up Label "+item.label);
-    if (item.day == number)
+    if (item.day === number)
     {
       return item.label;
     }
