@@ -1,24 +1,56 @@
 console.log("MVA Tracking Dashboard");
 
-const APREP_STORAGE_KEY = "mva_a_sl_tracker";
-let state = JSON.parse(localStorage.getItem(APREP_STORAGE_KEY)) || {position: []};
+weekAPrepStats();
+weekABuildStats();
 
-let weekAPrepDone = 0;
-let weekAPrepToDo = 0;
+function weekAPrepStats()
+{
+    const STORAGE_KEY = "mva_a_sl_tracker";
+    let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+    
+    let done = 0;
+    let toDo = 0;
+    
+    state.position.forEach(item => {
+      if (item.status === "Done")
+      {
+        done++;
+      }
+      else
+      {
+        toDo++;
+      }
+    });
+    
+    const statsCont = document.getElementById("week-a-sl-prep");
+    const stats = document.createElement("p");
+    stats.textContent = done+" Prep Items Done "+toDo+" Still to Do";
+    statsCont.appendChild(stats);
+}
 
-state.position.forEach(item => {
-  if (item.status === "Done")
-  {
-    weekAPrepDone++;
-  }
-  else
-  {
-    weekAPrepToDo++;
-  }
-});
+function weekABuildStats()
+{
+    const STORAGE_KEY = "mva_a_slbuild_tracker";
+    let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+    
+    let done = 0;
+    let toDo = 0;
+    
+    state.position.forEach(item => {
+      if (item.status === "Done")
+      {
+        done++;
+      }
+      else
+      {
+        toDo++;
+      }
+    });
+    
+    const statsCont = document.getElementById("week-a-sl-prep");
+    const stats = document.createElement("p");
+    stats.textContent = done+" Prep Items Done "+toDo+" Still to Do";
+    statsCont.appendChild(stats);
+}
 
-const weekAPrepStatsCont = document.getElementById("week-a-sl-prep");
-const weekAPrepStats = document.createElement("p");
-weekAPrepStats.textContent = weekAPrepDone+" Prep Items Done "+weekAPrepToDo+" Still to Do";
-weekAPrepStatsCont.appendChild(weekAPrepStats);
 
