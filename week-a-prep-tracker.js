@@ -248,7 +248,7 @@ function lookupDay(number)
    
    });
    
-   return reponse;
+   return response;
 }
 
 //Reset the week
