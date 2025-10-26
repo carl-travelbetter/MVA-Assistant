@@ -241,13 +241,13 @@ function lookupDay(number)
     console.log("Look Up Label "+item.label);
     if (item.day === number)
     {
+      console.log("Match Found");
       return item.label;
     }
-    else 
-    {
-      return "Day Not Found";
-    } 
+   
    });
+   noMatch = "Day not found";
+   return noMatch;
 }
 
 //Reset the week
