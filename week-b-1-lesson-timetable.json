@@ -1,12 +1,12 @@
 [
-  {"subject":"Biology", "day":6, "priority":1},
-  {"subject":"Chemistry", "day":8, "priority":6},
-  {"subject":"Physics", "day":8, "priority":4},
-  {"subject":"French", "day":9, "priority":7},
-  {"subject":"History", "day":8, "priority":5},
-  {"subject":"Geography", "day":10, "priority":8},
-  {"subject":"Classical Civilisation", "day":7, "priority":3},
-  {"subject":"Global Citizenship", "day":6, "priority":2},
-  {"subject":"English Lit","day":10, "priority":9},
-  {"subject":"Wellbeing","day":10, "priority":10}
+  {"subject":"Biology", "day":8, "priority":1},
+  {"subject":"Chemistry", "day":10, "priority":6},
+  {"subject":"Physics", "day":10, "priority":4},
+  {"subject":"French", "day":11, "priority":7},
+  {"subject":"History", "day":10, "priority":5},
+  {"subject":"Geography", "day":12, "priority":8},
+  {"subject":"Classical Civilisation", "day":9, "priority":3},
+  {"subject":"Global Citizenship", "day":8, "priority":2},
+  {"subject":"English Lit","day":12, "priority":9},
+  {"subject":"Wellbeing","day":12, "priority":10}
 ]
