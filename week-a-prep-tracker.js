@@ -244,7 +244,8 @@ function lookupDay(number)
     else 
     {
       "Day Not Found";
-    }     
+    } 
+   });
 }
 
 //Reset the week
