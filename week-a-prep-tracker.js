@@ -16,7 +16,7 @@ let daysLookup = [];
   .then(data => {
     daysLookup = data;
     console.log("Days Look Up Loaded", daysLookup);
-    console.l;og("Days Look Up "+daysLookup.length);
+    console.log("Days Look Up "+daysLookup.length);
   })
   .catch(error => console.error("Error loading days lookup", error));
 
