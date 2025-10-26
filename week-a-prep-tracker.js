@@ -237,13 +237,15 @@ function lookupDay(number)
 {
    console.log("Look up day "+number);
    daysLookup.forEach(item => {
+    console.log("Look Up Day "+item.day);
+    console.log("Look Up Label "+item.label);
     if (item.day == number)
     {
       return item.label;
     }
     else 
     {
-      "Day Not Found";
+      return "Day Not Found";
     } 
    });
 }
