@@ -179,7 +179,7 @@ function getNextTask()
         subject.textContent = item.subject+" Prep & Share Tasks";
         output.appendChild(subject);
         const dueDay = document.createElement("p");
-        let dayLabel = lookupDay(item.day+1);
+        let dayLabel = lookupDay(item.day);
         dueDay.textContent = "Due by day "+dayLabel;
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
