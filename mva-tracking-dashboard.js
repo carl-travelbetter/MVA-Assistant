@@ -49,7 +49,7 @@ function weekABuildStats()
     
     const statsCont = document.getElementById("week-a-sl-prep");
     const stats = document.createElement("p");
-    stats.textContent = done+" Prep Items Done "+toDo+" Still to Do";
+    stats.textContent = done+" Build Items Done "+toDo+" Still to Do";
     statsCont.appendChild(stats);
 }
 
