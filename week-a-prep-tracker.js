@@ -10,6 +10,16 @@ let slTimetable = [];
   })
   .catch(error => console.error("Error loading timetable", error));
 
+let daysLookup = [];
+ fetch('day-lookup.json')
+  .then(response => response.json())
+  .then(data => {
+    daysLookup = data;
+    console.log("Days Look Up Loaded", daysLookup);
+    console.l;og("Days Look Up "+daysLookup.length);
+  })
+  .catch(error => console.error("Error loading days lookup", error));
+
 const SLTAGS = {
   subjects: ["English Lit", "Biology", "Chemistry", "Physics", "French", "Wellbeing", "Classical Civilisation", "Global Citizenship", "History", "Geography"]
 };
@@ -168,8 +178,10 @@ function getNextTask()
         const subject = document.createElement("p");
         subject.textContent = item.subject+" Prep & Share Tasks";
         output.appendChild(subject);
+        //lookup day - pass the item day and return a string
+        let day = lookupDay(item.day);
         const dueDay = document.createElement("p");
-        dueDay.textContent = "Due by day "+item.day;
+        dueDay.textContent = "Due by "+day;
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
@@ -219,6 +231,20 @@ function updateDoneList()
   }
   
  });
+}
+
+function lookupDay(number)
+{
+   console.log("Look up day "+number);
+   daysLookup.forEach(item => {
+    if (item.day == number)
+    {
+      return item.label;
+    }
+    else 
+    {
+      "Day Not Found";
+    }     
 }
 
 //Reset the week
