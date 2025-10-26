@@ -27,7 +27,7 @@ function weekAPrepStats()
     const stats = document.createElement("a");
     stats.href = "week-a-sl-prep.html";
     stats.textContent = done+" Prep Items Done "+toDo+" Still to Do";
-    statsP.appendChild(stats);
+    statP.appendChild(stats);
     statsCont.appendChild(statP);
 }
 
@@ -55,7 +55,7 @@ function weekABuildStats()
     const stats = document.createElement("a");
     stats.href = "week-a-sl-build.html";
     stats.textContent = done+" Build Items Done "+toDo+" Still to Do";
-    statsP.appendChild(stats);
+    statP.appendChild(stats);
     statsCont.appendChild(statP);
 }
 
