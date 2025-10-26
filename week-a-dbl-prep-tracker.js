@@ -180,7 +180,7 @@ function getNextTask()
         output.appendChild(subject);
         const dueDay = document.createElement("p");
         let dayLabel = lookupDay(item.day);
-        dueDay.textContent = "Due by day "+dayLabel;
+        dueDay.textContent = "Due by "+dayLabel;
         output.appendChild(dueDay);
         const doneButton = document.createElement("button");
         doneButton.className = "control-btn";
