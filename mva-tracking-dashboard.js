@@ -19,6 +19,6 @@ state.position.forEach(item => {
 
 const weekAPrepStatsCont = document.getElementById("week-a-sl-prep");
 const weekAPrepStats = document.createElement("p");
-weekAPrepStats.textContent = weekAPrepDone+" Prep Items Done "+weekAPrepToDo+"Still to Do";
+weekAPrepStats.textContent = weekAPrepDone+" Prep Items Done "+weekAPrepToDo+" Still to Do";
 weekAPrepStatsCont.appendChild(weekAPrepStats);
 
