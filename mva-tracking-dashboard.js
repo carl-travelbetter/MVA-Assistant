@@ -23,7 +23,8 @@ function weekAPrepStats()
     });
     
     const statsCont = document.getElementById("week-a-sl-prep");
-    const stats = document.createElement("p");
+    const stats = document.createElement("a");
+    stats.href = "week-a-sl-prep.html";
     stats.textContent = done+" Prep Items Done "+toDo+" Still to Do";
     statsCont.appendChild(stats);
 }
@@ -48,7 +49,8 @@ function weekABuildStats()
     });
     
     const statsCont = document.getElementById("week-a-sl-prep");
-    const stats = document.createElement("p");
+    const stats = document.createElement("a");
+    stats.href = "week-a-sl-build.html";
     stats.textContent = done+" Build Items Done "+toDo+" Still to Do";
     statsCont.appendChild(stats);
 }
