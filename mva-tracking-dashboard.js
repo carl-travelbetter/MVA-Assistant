@@ -227,7 +227,7 @@ function weekBSubmitStats()
     const statsCont = document.getElementById("week-b-sl-submit");
     const statP = document.createElement("p");
     const stats = document.createElement("a");
-    stats.href = "week-b-sl-prep.html";
+    stats.href = "week-b-sl-submit.html";
     stats.textContent = done+" Single Lesson Submit Items Done "+toDo+" Still to Do";
     statP.appendChild(stats);
     statsCont.appendChild(statP);
