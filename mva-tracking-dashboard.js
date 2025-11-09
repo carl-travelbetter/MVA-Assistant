@@ -195,11 +195,11 @@ function weekBPrepStats()
       }
     });
     
-    const statsCont = document.getElementById("week-a-dbl-prep");
+    const statsCont = document.getElementById("week-b-sl-prep");
     const statP = document.createElement("p");
     const stats = document.createElement("a");
-    stats.href = "week-a-sl-prep.html";
-    stats.textContent = done+" Double Lesson Prep Items Done "+toDo+" Still to Do";
+    stats.href = "week-b-sl-prep.html";
+    stats.textContent = done+" Single Lesson Prep Items Done "+toDo+" Still to Do";
     statP.appendChild(stats);
     statsCont.appendChild(statP);
 }
