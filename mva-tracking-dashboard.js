@@ -7,6 +7,7 @@ weekADblPrepStats();
 weekADblBuildStats();
 weekADblSubmitStats();
 weekBPrepStats();
+weekBSubmitStats();
 
 function weekAPrepStats()
 {
@@ -204,4 +205,31 @@ function weekBPrepStats()
     statsCont.appendChild(statP);
 }
 
+function weekBSubmitStats()
+{
+    const STORAGE_KEY = "mva_b_slsubmit_tracker";
+    let state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {position: []};
+    
+    let done = 0;
+    let toDo = 0;
+    
+    state.position.forEach(item => {
+      if (item.status === "Done")
+      {
+        done++;
+      }
+      else
+      {
+        toDo++;
+      }
+    });
+    
+    const statsCont = document.getElementById("week-b-sl-submit");
+    const statP = document.createElement("p");
+    const stats = document.createElement("a");
+    stats.href = "week-b-sl-prep.html";
+    stats.textContent = done+" Single Lesson Submit Items Done "+toDo+" Still to Do";
+    statP.appendChild(stats);
+    statsCont.appendChild(statP);
 
+}
